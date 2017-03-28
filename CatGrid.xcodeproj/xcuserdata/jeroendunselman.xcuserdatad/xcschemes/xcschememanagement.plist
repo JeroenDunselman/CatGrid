@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>CatGrid.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>A9435B571E8AC00F00ECF4CE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A9435B6B1E8AC01000ECF4CE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A9435B761E8AC01000ECF4CE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

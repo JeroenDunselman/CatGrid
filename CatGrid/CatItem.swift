@@ -23,15 +23,11 @@ class Item : NSObject {
     downloadImage(url: imgURL)
   }
   
-  func count() {
-    counter += 1
-    print("counter: \(counter)")
-  }
   func downloadImage(url: URL) {
 //    print("Download Started")
     getDataFromUrl(url: url) { (data, response, error)  in
       guard let data = data, error == nil else { return }
-      print(response?.suggestedFilename ?? url.lastPathComponent)
+//      print(response?.suggestedFilename ?? url.lastPathComponent)
 //      print("Download Finished")
       self.count()
       DispatchQueue.main.async() { () -> Void in
@@ -39,11 +35,12 @@ class Item : NSObject {
       }
     }
   }
+  
   func downloadImage(url: URL, imageVw:UIImageView) {
 //    print("Download Started")
     getDataFromUrl(url: url) { (data, response, error)  in
       guard let data = data, error == nil else { return }
-      print(response?.suggestedFilename ?? url.lastPathComponent)
+//      print(response?.suggestedFilename ?? url.lastPathComponent)
 //      print("Download Finished From View")
       self.count()
       DispatchQueue.main.async() { () -> Void in
@@ -51,6 +48,12 @@ class Item : NSObject {
       }
     }
   }
+  
+  func count() {
+    counter += 1
+    print("counter: \(counter)")
+  }
+  
   func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
     URLSession.shared.dataTask(with: url) {
       (data, response, error) in

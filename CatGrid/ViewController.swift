@@ -8,12 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController, XMLParserDelegate {
+class ViewController: UIViewController, XMLParserDelegate, UIScrollViewDelegate {
   
-  func startLoading() {}
-  func finishLoading() {}
+//  func startLoading() {}
+//  func finishLoading() {}
+//  
   @IBOutlet var tableView : UITableView?
+  @IBOutlet var scrollView: UIScrollView!
+  
   var catPresenter:CatService?
+  let defaultImgWhileLoading = UIImage(named:"thin-1474_cat_pet-128")
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -22,6 +27,21 @@ class ViewController: UIViewController, XMLParserDelegate {
     
     catPresenter = CatService(vc: self)//self.tv
     catPresenter?.getCats()
+  }
+  
+  func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    let backgroundMargin:CGFloat = 100
+    let height = scrollView.frame.size.height
+    let contentYoffset = scrollView.contentOffset.y
+    let distanceFromBottom = scrollView.contentSize.height - contentYoffset
+    if distanceFromBottom < height - backgroundMargin {
+      print(" you reached end of the table")
+      catPresenter?.getCats()
+    }
+    if scrollView.contentOffset.y < -(backgroundMargin) {
+      print(" you reached the top of the table")
+      catPresenter?.getCats()
+    }
   }
   
   //TableviewDelegate
@@ -34,9 +54,8 @@ class ViewController: UIViewController, XMLParserDelegate {
   {
     let cell = tableView.dequeueReusableCell(withIdentifier: "CatCell", for: indexPath) as! CatTVCell
     
-    let defaultImgWhileLoading = UIImage(named:"thin-1474_cat_pet-128")
     cell.catView.image = defaultImgWhileLoading
-
+    
     let item:Item = catPresenter!.catItems[indexPath.row]
     if (item.image != nil) {
       cell.catView.image = item.image

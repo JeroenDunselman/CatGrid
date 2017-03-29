@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		A9435B5C1E8AC00F00ECF4CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9435B5B1E8AC00F00ECF4CE /* AppDelegate.swift */; };
-		A9435B5E1E8AC00F00ECF4CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9435B5D1E8AC00F00ECF4CE /* ViewController.swift */; };
 		A9435B611E8AC00F00ECF4CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9435B5F1E8AC00F00ECF4CE /* Main.storyboard */; };
 		A9435B631E8AC00F00ECF4CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9435B621E8AC00F00ECF4CE /* Assets.xcassets */; };
 		A9435B661E8AC00F00ECF4CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9435B641E8AC00F00ECF4CE /* LaunchScreen.storyboard */; };
 		A9435B711E8AC01000ECF4CE /* CatGridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9435B701E8AC01000ECF4CE /* CatGridTests.swift */; };
 		A9435B7C1E8AC01000ECF4CE /* CatGridUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9435B7B1E8AC01000ECF4CE /* CatGridUITests.swift */; };
+		A9563A031E8BC5A300806580 /* tartan-cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A9563A021E8BC5A300806580 /* tartan-cat.jpg */; };
+		A9563A051E8BCBF600806580 /* thin-1474_cat_pet-128.png in Resources */ = {isa = PBXBuildFile; fileRef = A9563A041E8BCBF600806580 /* thin-1474_cat_pet-128.png */; };
+		A9563A0A1E8BCEF300806580 /* CatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9563A091E8BCEF300806580 /* CatItem.swift */; };
+		A9C9FD481E8B803D000D3804 /* CatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9FD471E8B803D000D3804 /* CatService.swift */; };
+		A9C9FD4A1E8B808F000D3804 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9FD491E8B808F000D3804 /* ViewController.swift */; };
+		A9C9FD4C1E8B9B8B000D3804 /* CatTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9FD4B1E8B9B8B000D3804 /* CatTVCell.swift */; };
+		B1DA9AC7D7A402A9EB6AA1D7 /* Pods_CatGrid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A8EB9FDB2E78093BF92690 /* Pods_CatGrid.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07238825E3A8CC5319670BDF /* Pods-CatGrid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatGrid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CatGrid/Pods-CatGrid.debug.xcconfig"; sourceTree = "<group>"; };
+		77A8EB9FDB2E78093BF92690 /* Pods_CatGrid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatGrid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CE96C739A404354F6E1A877 /* Pods-CatGrid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatGrid.release.xcconfig"; path = "Pods/Target Support Files/Pods-CatGrid/Pods-CatGrid.release.xcconfig"; sourceTree = "<group>"; };
 		A9435B581E8AC00F00ECF4CE /* CatGrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatGrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9435B5B1E8AC00F00ECF4CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A9435B5D1E8AC00F00ECF4CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A9435B601E8AC00F00ECF4CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A9435B621E8AC00F00ECF4CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9435B651E8AC00F00ECF4CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +55,12 @@
 		A9435B771E8AC01000ECF4CE /* CatGridUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatGridUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9435B7B1E8AC01000ECF4CE /* CatGridUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatGridUITests.swift; sourceTree = "<group>"; };
 		A9435B7D1E8AC01000ECF4CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9563A021E8BC5A300806580 /* tartan-cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tartan-cat.jpg"; sourceTree = "<group>"; };
+		A9563A041E8BCBF600806580 /* thin-1474_cat_pet-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thin-1474_cat_pet-128.png"; sourceTree = "<group>"; };
+		A9563A091E8BCEF300806580 /* CatItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatItem.swift; sourceTree = "<group>"; };
+		A9C9FD471E8B803D000D3804 /* CatService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatService.swift; sourceTree = "<group>"; };
+		A9C9FD491E8B808F000D3804 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A9C9FD4B1E8B9B8B000D3804 /* CatTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatTVCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1DA9AC7D7A402A9EB6AA1D7 /* Pods_CatGrid.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +89,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05C3D57377341335B1E2099B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77A8EB9FDB2E78093BF92690 /* Pods_CatGrid.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3A1B81AC59A8388DE84D54AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				07238825E3A8CC5319670BDF /* Pods-CatGrid.debug.xcconfig */,
+				9CE96C739A404354F6E1A877 /* Pods-CatGrid.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A9435B4F1E8AC00F00ECF4CE = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +113,8 @@
 				A9435B6F1E8AC01000ECF4CE /* CatGridTests */,
 				A9435B7A1E8AC01000ECF4CE /* CatGridUITests */,
 				A9435B591E8AC00F00ECF4CE /* Products */,
+				3A1B81AC59A8388DE84D54AF /* Pods */,
+				05C3D57377341335B1E2099B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,11 +131,12 @@
 		A9435B5A1E8AC00F00ECF4CE /* CatGrid */ = {
 			isa = PBXGroup;
 			children = (
-				A9435B5B1E8AC00F00ECF4CE /* AppDelegate.swift */,
-				A9435B5D1E8AC00F00ECF4CE /* ViewController.swift */,
+				A9563A071E8BCEBB00806580 /* Model */,
+				A9563A081E8BCEC800806580 /* View */,
+				A9563A061E8BCE9D00806580 /* Assets */,
 				A9435B5F1E8AC00F00ECF4CE /* Main.storyboard */,
-				A9435B621E8AC00F00ECF4CE /* Assets.xcassets */,
 				A9435B641E8AC00F00ECF4CE /* LaunchScreen.storyboard */,
+				A9435B5B1E8AC00F00ECF4CE /* AppDelegate.swift */,
 				A9435B671E8AC01000ECF4CE /* Info.plist */,
 			);
 			path = CatGrid;
@@ -125,6 +160,34 @@
 			path = CatGridUITests;
 			sourceTree = "<group>";
 		};
+		A9563A061E8BCE9D00806580 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A9435B621E8AC00F00ECF4CE /* Assets.xcassets */,
+				A9563A021E8BC5A300806580 /* tartan-cat.jpg */,
+				A9563A041E8BCBF600806580 /* thin-1474_cat_pet-128.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		A9563A071E8BCEBB00806580 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A9C9FD471E8B803D000D3804 /* CatService.swift */,
+				A9563A091E8BCEF300806580 /* CatItem.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A9563A081E8BCEC800806580 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A9C9FD4B1E8B9B8B000D3804 /* CatTVCell.swift */,
+				A9C9FD491E8B808F000D3804 /* ViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9435B801E8AC01000ECF4CE /* Build configuration list for PBXNativeTarget "CatGrid" */;
 			buildPhases = (
+				4B19C6DB8F2B79B38D399D77 /* Check Pods Manifest.lock */,
 				A9435B541E8AC00F00ECF4CE /* Sources */,
 				A9435B551E8AC00F00ECF4CE /* Frameworks */,
 				A9435B561E8AC00F00ECF4CE /* Resources */,
+				AEBA06A6741BD00E0E546366 /* Embed Pods Frameworks */,
+				00BBABFF29F7E2A4E9B7786C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,9 +301,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9563A031E8BC5A300806580 /* tartan-cat.jpg in Resources */,
 				A9435B661E8AC00F00ECF4CE /* LaunchScreen.storyboard in Resources */,
 				A9435B631E8AC00F00ECF4CE /* Assets.xcassets in Resources */,
 				A9435B611E8AC00F00ECF4CE /* Main.storyboard in Resources */,
+				A9563A051E8BCBF600806580 /* thin-1474_cat_pet-128.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,12 +325,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		00BBABFF29F7E2A4E9B7786C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CatGrid/Pods-CatGrid-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B19C6DB8F2B79B38D399D77 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AEBA06A6741BD00E0E546366 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CatGrid/Pods-CatGrid-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A9435B541E8AC00F00ECF4CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9435B5E1E8AC00F00ECF4CE /* ViewController.swift in Sources */,
+				A9C9FD481E8B803D000D3804 /* CatService.swift in Sources */,
+				A9C9FD4C1E8B9B8B000D3804 /* CatTVCell.swift in Sources */,
+				A9563A0A1E8BCEF300806580 /* CatItem.swift in Sources */,
+				A9C9FD4A1E8B808F000D3804 /* ViewController.swift in Sources */,
 				A9435B5C1E8AC00F00ECF4CE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,7 +530,9 @@
 		};
 		A9435B811E8AC01000ECF4CE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07238825E3A8CC5319670BDF /* Pods-CatGrid.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 447M47227T;
 				INFOPLIST_FILE = CatGrid/Info.plist;
@@ -424,7 +545,9 @@
 		};
 		A9435B821E8AC01000ECF4CE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CE96C739A404354F6E1A877 /* Pods-CatGrid.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 447M47227T;
 				INFOPLIST_FILE = CatGrid/Info.plist;
@@ -512,6 +635,7 @@
 				A9435B821E8AC01000ECF4CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A9435B831E8AC01000ECF4CE /* Build configuration list for PBXNativeTarget "CatGridTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +644,7 @@
 				A9435B851E8AC01000ECF4CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A9435B861E8AC01000ECF4CE /* Build configuration list for PBXNativeTarget "CatGridUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +653,7 @@
 				A9435B881E8AC01000ECF4CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

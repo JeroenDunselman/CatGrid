@@ -21,21 +21,18 @@ class CatService : NSObject, XMLParserDelegate {
         catVC = vc
     super.init()
   }
-//  func serviceAvailable() -> Bool {
-//    return availability
-//  }
+
   func getCats() {
     if availability {
-      
-      print("getting feline")
+//      print("feline service")
       serviceAvailabilityTimer = Timer.scheduledTimer(timeInterval: 5, target:self, selector: #selector(CatService.releaseService), userInfo: nil, repeats: true)
       availability = false
       catItems = []
       beginParsing()
-    } else {
-      print("service denied")
     }
+//    else {print("no service")}
   }
+  
   func releaseService() {
     print("service released")
     availability = true
@@ -53,13 +50,12 @@ class CatService : NSObject, XMLParserDelegate {
   var parsecount: Int = 0
   func beginParsing()
   {
-    parsecount += 1
-    print("beginParsing \(parsecount)")
+//    parsecount += 1
+//    print("beginParsing \(parsecount)")
     parser = XMLParser(contentsOf:(URL(string:catAPIBaseURL))!)!
     parser.delegate = self //self.catVC
     parser.parse()
     catVC?.tableView!.reloadData()
-//    serviceAvailable = !serviceAvailable
   }
   
   //XMLParser Methods
@@ -74,12 +70,14 @@ class CatService : NSObject, XMLParserDelegate {
       urlCatPic = ""
     }
   }
+  
   func parser(_ parser: XMLParser, foundCharacters string: String)
   {
     if element.isEqual(to: keyNameOfCatPicUrl) {
       urlCatPic.append(string)
     }
   }
+  
   func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?)
   {
     if (elementName as NSString).isEqual(to: elementNameOfCatPicUrl) {

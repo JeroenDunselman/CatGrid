@@ -20,7 +20,6 @@ class TextVC: UIViewController {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-  
 }
 
 extension UIWebView {
@@ -36,14 +35,10 @@ extension UIWebView {
     // Excute HTTP
     let task = URLSession.shared.dataTask(with: request as URLRequest) {
       data, response, error in
-      if error != nil
-      {
-        print("error=\(error)")
-        return
-      }
+      guard let data = data, error == nil else { return }
       
       // Load response string to self
-      let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+      let responseString = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
       self.loadHTMLString(responseString as! String, baseURL: nil)
     }
     task.resume()
@@ -51,8 +46,11 @@ extension UIWebView {
   
 }
 
-
-
+//      if error != nil
+//      {
+//        print("error=\(error)")
+//        return
+//      }
 //    let scriptUrl = loremUrl //"http://swiftdeveloperblog.com/my-http-get-example-script/"
 //    // Add one parameter
 //    let urlWithParams = loremUrl //scriptUrl + "?userName=\(userNameValue!)"

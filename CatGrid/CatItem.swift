@@ -26,7 +26,7 @@ class Item : NSObject {
   func downloadImage(url: URL) {
 //    print("Download Started")
     getDataFromUrl(url: url) { (data, response, error)  in
-      guard let data = data, error == nil else { return }
+    guard let data = data, error == nil else { return }
 //      print(response?.suggestedFilename ?? url.lastPathComponent)
 //      print("Download Finished")
       self.count()

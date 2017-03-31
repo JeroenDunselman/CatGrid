@@ -11,22 +11,21 @@ import UIKit
 class TextVC: UIViewController {
   @IBOutlet weak var webView: UIWebView!
 
+  @IBOutlet weak var activityView: UIActivityIndicatorView!
   @IBAction func actionDone(_ sender: Any) {
     self.dismiss(animated: true, completion: nil)
   }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.activityView.startAnimating()
+    self.webView.isHidden = false
     self.webView.showLoremScript()
   }
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
-  }
-   func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    if segue.identifier == "SavePlayerDetail" {
-//      player = Player(name: nameTextField.text!, game: "Chess", rating: 1)
-    }
   }
 }
 
@@ -48,10 +47,13 @@ extension UIWebView {
       // Load response string to self
       let responseString = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
       self.loadHTMLString(responseString as! String, baseURL: nil)
+      
+      DispatchQueue.main.async {
+        self.isHidden = false
+      }
     }
     task.resume()
   }
-  
 }
 
 //      if error != nil

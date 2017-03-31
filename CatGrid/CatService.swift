@@ -58,10 +58,8 @@ class CatService : NSObject, XMLParserDelegate {
   var parsecount: Int = 0
   func beginParsing()
   {
-//    parsecount += 1
-//    print("beginParsing \(parsecount)")
     parser = XMLParser(contentsOf:(URL(string:catAPIBaseURL))!)!
-    parser.delegate = self //self.catVC
+    parser.delegate = self 
     parser.parse()
     catVC?.tableView!.reloadData()
   }

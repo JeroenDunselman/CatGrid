@@ -19,13 +19,17 @@ class TextVC: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.activityView.startAnimating()
-    self.webView.isHidden = false
+    self.webView.isHidden = true
     self.webView.showLoremScript()
   }
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
+  }
+  
+  func presentView() {
+  
   }
 }
 

@@ -8,9 +8,14 @@
 
 import Foundation
 
+protocol CatView: NSObjectProtocol {
+  func startLoading()
+  func finishLoading()
+}
+
 class CatService : NSObject, XMLParserDelegate {
   
-  let catAPIBaseURL:String = "http://thecatapi.com/api/images/get?format=xml&results_per_page=10&type=gif"
+  let catAPIBaseURL:String = "http://thecatapi.com/api/images/get?format=xml&results_per_page=100&type=gif"
   var catItems:[Item] = []
 
   var availability:Bool = true
@@ -23,7 +28,9 @@ class CatService : NSObject, XMLParserDelegate {
   }
 
   func getCats() {
+
     if availability {
+      catVC?.startLoading()
 //      print("feline service")
       serviceAvailabilityTimer = Timer.scheduledTimer(timeInterval: 5, target:self, selector: #selector(CatService.releaseService), userInfo: nil, repeats: true)
       availability = false
@@ -37,6 +44,7 @@ class CatService : NSObject, XMLParserDelegate {
     print("service released")
     availability = true
     serviceAvailabilityTimer?.invalidate()
+    catVC?.finishLoading()
   }
   
   let elementNameOfCatPicUrl:String = "image"

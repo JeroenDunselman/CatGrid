@@ -8,17 +8,32 @@
 
 import UIKit
 
-class ViewController: UIViewController, XMLParserDelegate, UIScrollViewDelegate {
+class ViewController: UIViewController, XMLParserDelegate, UIScrollViewDelegate, CatView {
   
-//  func startLoading() {}
-//  func finishLoading() {}
-//  
+  //
   @IBOutlet var tableView : UITableView?
   @IBOutlet var scrollView: UIScrollView!
+  @IBOutlet weak var activityIndicatorBottom: UIActivityIndicatorView!
+  @IBOutlet weak var activityIndicatorTop: UIActivityIndicatorView!
+  
+  let defaultImgWhileLoading = UIImage(named:"thin-1474_cat_pet-128")
+  let triggerLoadScrollDistance:CGFloat = 100
   
   var catPresenter:CatService?
-  let defaultImgWhileLoading = UIImage(named:"thin-1474_cat_pet-128")
   
+  @IBAction func savePlayerDetail(segue:UIStoryboardSegue) {
+//    if let playerDetailsViewController = segue.sourceViewController as? PlayerDetailsViewController {
+//      
+//      //add the new player to the players array
+//      if let player = playerDetailsViewController.player {
+//        players.append(player)
+//        
+//        //update the tableView
+//        let indexPath = NSIndexPath(forRow: players.count-1, inSection: 0)
+//        tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+//      }
+//    }
+  }
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -30,18 +45,30 @@ class ViewController: UIViewController, XMLParserDelegate, UIScrollViewDelegate 
   }
   
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
-    let backgroundMargin:CGFloat = 100
+    
     let height = scrollView.frame.size.height
     let contentYoffset = scrollView.contentOffset.y
     let distanceFromBottom = scrollView.contentSize.height - contentYoffset
-    if distanceFromBottom < height - backgroundMargin {
-      print(" you reached end of the table")
-      catPresenter?.getCats()
+    
+    let refreshForBottomScroll:Bool = distanceFromBottom < height - triggerLoadScrollDistance
+    let refreshForTopScroll:Bool =  scrollView.contentOffset.y < -(triggerLoadScrollDistance)
+    
+    if (refreshForBottomScroll || refreshForTopScroll) {
+      getCats()
     }
-    if scrollView.contentOffset.y < -(backgroundMargin) {
-      print(" you reached the top of the table")
-      catPresenter?.getCats()
-    }
+  }
+  
+  func getCats() {
+    catPresenter?.getCats()
+  }
+  
+  func startLoading(){
+    self.activityIndicatorTop.startAnimating()
+    self.activityIndicatorBottom.startAnimating()
+  }
+  func finishLoading() {
+    self.activityIndicatorTop.stopAnimating()
+    self.activityIndicatorBottom.stopAnimating()
   }
   
   //TableviewDelegate
@@ -65,7 +92,26 @@ class ViewController: UIViewController, XMLParserDelegate, UIScrollViewDelegate 
     
     return cell as CatTVCell
   }
-  
+//  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//    print("hel")
+//  }
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    print("hel")
+  }
+//  func tableView(_ tableView: UITableView, didSelectRowAt
+//    indexPath: IndexPath) {
+//    
+//    //your code...
+////    self.window = UIWindow(frame: UIScreen.main.bounds)
+//    let nav1 = UINavigationController()
+//    let mainView = TestVC(nibName: "TestVC", bundle: nil) //ViewController = Name of your controller
+//    nav1.viewControllers = [mainView]
+//    present(nav1, animated: true, completion: {print("completed")})
+////    self.window!.rootViewController = nav1
+////    self.window?.makeKeyAndVisible()
+//    
+//  }
+
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
   }

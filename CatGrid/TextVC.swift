@@ -10,7 +10,7 @@ import UIKit
 
 class TextVC: UIViewController {
   @IBOutlet weak var webView: UIWebView!
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
     self.webView.showLoremScript()
@@ -19,6 +19,11 @@ class TextVC: UIViewController {
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
+  }
+   func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "SavePlayerDetail" {
+//      player = Player(name: nameTextField.text!, game: "Chess", rating: 1)
+    }
   }
 }
 

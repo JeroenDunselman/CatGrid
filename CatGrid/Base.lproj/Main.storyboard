@@ -21,19 +21,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="uqo-GX-BLh">
+                                <rect key="frame" x="177" y="96" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="0J8-hJ-mjU"/>
+                                    <constraint firstAttribute="height" constant="20" id="UL9-1i-Ns6"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ihh-Fa-qYz">
+                                <rect key="frame" x="177" y="615" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="CmB-Qp-OXr"/>
+                                    <constraint firstAttribute="height" constant="20" id="rba-Ja-E4d"/>
+                                </constraints>
+                            </activityIndicatorView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="160" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oCO-Ie-G4s">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CatCell" rowHeight="375" id="WQO-0X-qMd" customClass="CatTVCell" customModule="CatGrid" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="375"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WQO-0X-qMd" id="Is0-F5-MKT">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="374"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kpY-8e-oQb">
-                                                    <rect key="frame" x="4" y="4" width="367" height="366.5"/>
+                                                    <rect key="frame" x="4" y="4" width="367" height="367"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 </imageView>
                                             </subviews>
@@ -58,21 +72,28 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="oCO-Ie-G4s" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="1me-Fk-7IO"/>
+                            <constraint firstItem="ihh-Fa-qYz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GgH-l7-Dzm"/>
+                            <constraint firstItem="uqo-GX-BLh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="32" id="MnN-St-RlE"/>
                             <constraint firstItem="oCO-Ie-G4s" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="e7N-hS-jQs"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ihh-Fa-qYz" secondAttribute="bottom" constant="32" id="fIq-kt-fTs"/>
                             <constraint firstAttribute="trailing" secondItem="oCO-Ie-G4s" secondAttribute="trailing" id="gxd-VQ-HNq"/>
                             <constraint firstItem="oCO-Ie-G4s" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="jaC-Ug-XO6"/>
+                            <constraint firstItem="uqo-GX-BLh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r8R-e7-Zjw"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="DEd-rR-YtR"/>
                     <connections>
+                        <outlet property="activityIndicatorBottom" destination="ihh-Fa-qYz" id="A5R-rv-FwF"/>
+                        <outlet property="activityIndicatorTop" destination="uqo-GX-BLh" id="XxB-Xt-5el"/>
                         <outlet property="scrollView" destination="oCO-Ie-G4s" id="J9J-Hd-UaF"/>
                         <outlet property="tableView" destination="oCO-Ie-G4s" id="cDO-bt-ns4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="116" y="-69.715142428785612"/>
+            <point key="canvasLocation" x="1055.2" y="-69.715142428785612"/>
         </scene>
-        <!--TextVC-->
+        <!--Lorem Ipsum-->
         <scene sceneID="KCP-uS-Pz5">
             <objects>
                 <viewController id="8Te-w1-CCV" customClass="TextVC" customModule="CatGrid" customModuleProvider="target" sceneMemberID="viewController">
@@ -85,7 +106,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AsU-N0-Pqv">
-                                <rect key="frame" x="0.0" y="20" width="375" height="639"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="595"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                         </subviews>
@@ -97,13 +118,38 @@
                             <constraint firstItem="AsU-N0-Pqv" firstAttribute="top" secondItem="wMp-N8-TUr" secondAttribute="bottom" id="xwA-w2-Uju"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Lorem Ipsum" id="sEc-8T-g9f">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="Dcd-NF-Hc9">
+                            <connections>
+                                <action selector="actionDone:" destination="8Te-w1-CCV" id="ghi-Bj-lKc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="webView" destination="AsU-N0-Pqv" id="FAE-NC-rnf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UhU-tI-gZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="920.79999999999995" y="449.32533733133437"/>
+            <point key="canvasLocation" x="2456.8000000000002" y="675.11244377811101"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6EW-S8-UyF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ix9-Yf-2ld" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="99f-DV-FQm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8Te-w1-CCV" kind="relationship" relationship="rootViewController" id="9bJ-d5-3bX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vrb-eR-Cfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1517.5999999999999" y="675.11244377811101"/>
         </scene>
     </scenes>
 </document>

@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="uqo-GX-BLh">
-                                <rect key="frame" x="177" y="96" width="20" height="20"/>
+                                <rect key="frame" x="177" y="52" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="0J8-hJ-mjU"/>
                                     <constraint firstAttribute="height" constant="20" id="UL9-1i-Ns6"/>
@@ -36,14 +36,14 @@
                                 </constraints>
                             </activityIndicatorView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="160" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oCO-Ie-G4s">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CatCell" rowHeight="375" id="WQO-0X-qMd" customClass="CatTVCell" customModule="CatGrid" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="375"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WQO-0X-qMd" id="Is0-F5-MKT">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="374"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kpY-8e-oQb">
@@ -60,6 +60,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="catView" destination="kpY-8e-oQb" id="T7A-J6-gRQ"/>
+                                            <segue destination="xw2-5I-p97" kind="showDetail" id="Hdg-Uu-uaB"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -121,7 +122,7 @@
                     <navigationItem key="navigationItem" title="Lorem Ipsum" id="sEc-8T-g9f">
                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="Dcd-NF-Hc9">
                             <connections>
-                                <action selector="actionDone:" destination="8Te-w1-CCV" id="ghi-Bj-lKc"/>
+                                <action selector="actionDone:" destination="8Te-w1-CCV" id="g2V-mZ-vSs"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -131,25 +132,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UhU-tI-gZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2456.8000000000002" y="675.11244377811101"/>
+            <point key="canvasLocation" x="3396" y="675.11244377811101"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="6EW-S8-UyF">
+        <scene sceneID="z8D-Gh-9bg">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ix9-Yf-2ld" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xw2-5I-p97" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="99f-DV-FQm">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CC8-sd-edd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="8Te-w1-CCV" kind="relationship" relationship="rootViewController" id="9bJ-d5-3bX"/>
+                        <segue destination="8Te-w1-CCV" kind="relationship" relationship="rootViewController" id="d1O-XM-M6a"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vrb-eR-Cfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1mK-ca-dS9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1517.5999999999999" y="675.11244377811101"/>
+            <point key="canvasLocation" x="2456.8000000000002" y="675.11244377811101"/>
         </scene>
     </scenes>
 </document>

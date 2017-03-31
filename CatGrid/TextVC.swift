@@ -11,6 +11,9 @@ import UIKit
 class TextVC: UIViewController {
   @IBOutlet weak var webView: UIWebView!
 
+  @IBAction func actionDone(_ sender: Any) {
+    self.dismiss(animated: true, completion: nil)
+  }
   override func viewDidLoad() {
     super.viewDidLoad()
     self.webView.showLoremScript()

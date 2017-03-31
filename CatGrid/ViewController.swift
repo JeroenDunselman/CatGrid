@@ -21,19 +21,6 @@ class ViewController: UIViewController, XMLParserDelegate, UIScrollViewDelegate,
   
   var catPresenter:CatService?
   
-  @IBAction func savePlayerDetail(segue:UIStoryboardSegue) {
-//    if let playerDetailsViewController = segue.sourceViewController as? PlayerDetailsViewController {
-//      
-//      //add the new player to the players array
-//      if let player = playerDetailsViewController.player {
-//        players.append(player)
-//        
-//        //update the tableView
-//        let indexPath = NSIndexPath(forRow: players.count-1, inSection: 0)
-//        tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-//      }
-//    }
-  }
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -92,26 +79,7 @@ class ViewController: UIViewController, XMLParserDelegate, UIScrollViewDelegate,
     
     return cell as CatTVCell
   }
-//  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//    print("hel")
-//  }
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    print("hel")
-  }
-//  func tableView(_ tableView: UITableView, didSelectRowAt
-//    indexPath: IndexPath) {
-//    
-//    //your code...
-////    self.window = UIWindow(frame: UIScreen.main.bounds)
-//    let nav1 = UINavigationController()
-//    let mainView = TestVC(nibName: "TestVC", bundle: nil) //ViewController = Name of your controller
-//    nav1.viewControllers = [mainView]
-//    present(nav1, animated: true, completion: {print("completed")})
-////    self.window!.rootViewController = nav1
-////    self.window?.makeKeyAndVisible()
-//    
-//  }
-
+  
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
   }

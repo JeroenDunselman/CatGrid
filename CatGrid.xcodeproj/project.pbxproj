@@ -17,8 +17,6 @@
 		A9563A051E8BCBF600806580 /* thin-1474_cat_pet-128.png in Resources */ = {isa = PBXBuildFile; fileRef = A9563A041E8BCBF600806580 /* thin-1474_cat_pet-128.png */; };
 		A9563A0A1E8BCEF300806580 /* CatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9563A091E8BCEF300806580 /* CatItem.swift */; };
 		A9563A0C1E8C1E3600806580 /* TextVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9563A0B1E8C1E3600806580 /* TextVC.swift */; };
-		A96A4F201E8DA633007DD713 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A4F1E1E8DA633007DD713 /* TestVC.swift */; };
-		A96A4F211E8DA633007DD713 /* TestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A96A4F1F1E8DA633007DD713 /* TestVC.xib */; };
 		A9C9FD481E8B803D000D3804 /* CatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9FD471E8B803D000D3804 /* CatService.swift */; };
 		A9C9FD4A1E8B808F000D3804 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9FD491E8B808F000D3804 /* ViewController.swift */; };
 		A9C9FD4C1E8B9B8B000D3804 /* CatTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9FD4B1E8B9B8B000D3804 /* CatTVCell.swift */; };
@@ -62,8 +60,6 @@
 		A9563A041E8BCBF600806580 /* thin-1474_cat_pet-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thin-1474_cat_pet-128.png"; sourceTree = "<group>"; };
 		A9563A091E8BCEF300806580 /* CatItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatItem.swift; sourceTree = "<group>"; };
 		A9563A0B1E8C1E3600806580 /* TextVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextVC.swift; sourceTree = "<group>"; };
-		A96A4F1E1E8DA633007DD713 /* TestVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
-		A96A4F1F1E8DA633007DD713 /* TestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestVC.xib; sourceTree = "<group>"; };
 		A9C9FD471E8B803D000D3804 /* CatService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatService.swift; sourceTree = "<group>"; };
 		A9C9FD491E8B808F000D3804 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A9C9FD4B1E8B9B8B000D3804 /* CatTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatTVCell.swift; sourceTree = "<group>"; };
@@ -191,8 +187,6 @@
 				A9C9FD4B1E8B9B8B000D3804 /* CatTVCell.swift */,
 				A9C9FD491E8B808F000D3804 /* ViewController.swift */,
 				A9563A0B1E8C1E3600806580 /* TextVC.swift */,
-				A96A4F1E1E8DA633007DD713 /* TestVC.swift */,
-				A96A4F1F1E8DA633007DD713 /* TestVC.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -312,7 +306,6 @@
 			files = (
 				A9563A031E8BC5A300806580 /* tartan-cat.jpg in Resources */,
 				A9435B661E8AC00F00ECF4CE /* LaunchScreen.storyboard in Resources */,
-				A96A4F211E8DA633007DD713 /* TestVC.xib in Resources */,
 				A9435B631E8AC00F00ECF4CE /* Assets.xcassets in Resources */,
 				A9435B611E8AC00F00ECF4CE /* Main.storyboard in Resources */,
 				A9563A051E8BCBF600806580 /* thin-1474_cat_pet-128.png in Resources */,
@@ -394,7 +387,6 @@
 				A9C9FD4A1E8B808F000D3804 /* ViewController.swift in Sources */,
 				A9435B5C1E8AC00F00ECF4CE /* AppDelegate.swift in Sources */,
 				A9563A0C1E8C1E3600806580 /* TextVC.swift in Sources */,
-				A96A4F201E8DA633007DD713 /* TestVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,7 +27,6 @@ class Item : NSObject {
 //    print("Download Started")
     getDataFromUrl(url: url) { (data, response, error)  in
     guard let data = data, error == nil else { return }
-//      print(response?.suggestedFilename ?? url.lastPathComponent)
 //      print("Download Finished")
       self.count()
       DispatchQueue.main.async() { () -> Void in
@@ -40,9 +39,8 @@ class Item : NSObject {
 //    print("Download Started")
     getDataFromUrl(url: url) { (data, response, error)  in
       guard let data = data, error == nil else { return }
-//      print(response?.suggestedFilename ?? url.lastPathComponent)
-//      print("Download Finished From View")
-      self.count()
+
+//      self.count()
       DispatchQueue.main.async() { () -> Void in
         imageVw.image = UIImage(data: data)
       }

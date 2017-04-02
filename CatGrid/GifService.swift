@@ -61,7 +61,6 @@ class GifService: NSObject, ParserClient {
       return forRow.first?.image
     }
     
-    //( ..or attempt unarchive, then)
     return nil
   }
   
@@ -86,8 +85,6 @@ class GifService: NSObject, ParserClient {
     return nil
   }
   
-  //    addSpecialRequest(row: row, view: view)
-//  (row: indexPath.row, imageView: cell.catView) {
   func specialRequest(row: Int, imageView: UIImageView) {
     let resultUrl:String = (urlService?.urlString())!
     let request:GifRequest = GifRequest(url: resultUrl)

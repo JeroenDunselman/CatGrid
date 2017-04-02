@@ -45,23 +45,6 @@ class GifRequest : NSObject {
       self.assignedToRow = row
     }
   }
-    //1.0
-    
-//    DispatchQueue.global(qos: .userInitiated).async {
-//      if let imgResult = UIImage.gifImageWithURL(self.urlGif, storeItem: self) {
-//        print("downloaded from bg")
-//        //voorgrond
-//        DispatchQueue.main.async {
-//          imageVw.image = imgResult
-//          self.count()
-//          self.finishedLoading = true
-//        }
-//        //          item.image = imgResult
-//        //          item.stored = true
-//        //      item.downloadImage(url: item.imgURL, imageVw:cell.catView!)
-//      }
-//    }
-//  }
   
   func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
     URLSession.shared.dataTask(with: url) {

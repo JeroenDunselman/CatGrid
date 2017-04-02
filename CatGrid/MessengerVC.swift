@@ -7,8 +7,11 @@
 //
 
 import UIKit
+//extension MessengerVC: GifService {
+//
+//}
 
-class MessengerVC: UIViewController, UIScrollViewDelegate, MessageView, UITableViewDataSource, UITableViewDelegate  {
+class MessengerVC: UIViewController,  MessageView {//, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate,  {
   
   @IBOutlet weak var activityIndicatorBottom: UIActivityIndicatorView!
   @IBOutlet weak var activityIndicatorTop: UIActivityIndicatorView!
@@ -38,10 +41,15 @@ class MessengerVC: UIViewController, UIScrollViewDelegate, MessageView, UITableV
     // Dispose of any resources that can be recreated.
   }
   let defaultImgWhileLoading = UIImage(named:"thin-1474_cat_pet-128")
-//}
-//
-//extension MessengerVC: UITableViewDataSource, UITableViewDelegate  {
-//  
+  
+  let scrollDistanceTriggersReload: CGFloat = 100
+  var refreshDirectionIsTopToBottom: Bool = true
+  var scrollDirectionIsTopToBottom: Bool = true
+  var lastContentOffset: CGFloat = 0
+}
+
+extension MessengerVC: UITableViewDataSource, UITableViewDelegate  {
+  
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return 100
   }
@@ -63,11 +71,10 @@ class MessengerVC: UIViewController, UIScrollViewDelegate, MessageView, UITableV
     cell.textLabel?.text = String(indexPath.row)
     return cell as CatTVCell
   }
+}
+
+extension MessengerVC: UIScrollViewDelegate {
   
-  let scrollDistanceTriggersReload: CGFloat = 100
-  var refreshDirectionIsTopToBottom: Bool = true
-  var scrollDirectionIsTopToBottom: Bool = true
-  private var lastContentOffset: CGFloat = 0
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
     
     let height = scrollView.frame.size.height
@@ -79,10 +86,10 @@ class MessengerVC: UIViewController, UIScrollViewDelegate, MessageView, UITableV
     
     if (triggerForBottomScroll || triggerForTopScroll) {
       refreshDirectionIsTopToBottom = triggerForTopScroll
-      self.service?.initData()
+      self.service?.getCats()
     }
     
-    scrollDirectionIsTopToBottom = (self.lastContentOffset <= scrollView.contentOffset.y)
+    self.scrollDirectionIsTopToBottom = (self.lastContentOffset <= scrollView.contentOffset.y)
     self.lastContentOffset = scrollView.contentOffset.y
   }
 }

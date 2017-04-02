@@ -194,10 +194,8 @@
 		A9563A081E8BCEC800806580 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A92124C71E8F7C9300BF1A94 /* iOSDevCenters+GIF.swift */,
 				A9C9FD4B1E8B9B8B000D3804 /* CatTVCell.swift */,
 				A9C9FD491E8B808F000D3804 /* ViewController.swift */,
-				A9563A0B1E8C1E3600806580 /* TextVC.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -225,6 +223,8 @@
 			isa = PBXGroup;
 			children = (
 				A9C065AA1E90F28700651074 /* MessengerVC.swift */,
+				A92124C71E8F7C9300BF1A94 /* iOSDevCenters+GIF.swift */,
+				A9563A0B1E8C1E3600806580 /* TextVC.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";

@@ -19,13 +19,14 @@ class GifService: NSObject, ParserClient {
   var urlService: Parser?
   var gifRequests:[GifRequest]? = []
   
-  func initData() {
-    urlService?.getCats()
+  func getCats() {
+    urlService?.initData()
   }
   
   func makeRequest(num: Int) {
     for _ in 0..<num { addRequest() }
   }
+  
   func addRequest() {
     let resultUrl:String = (urlService?.urlString())!
     let request:GifRequest = GifRequest(url: resultUrl)
@@ -62,8 +63,8 @@ class GifService: NSObject, ParserClient {
     if !forRow.isEmpty {
       return forRow.first?.image
     }
-    //todo attempt unarchive
-    //if
+    
+    //( ..or attempt unarchive, then)
     return nil
   }
   

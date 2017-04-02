@@ -1,5 +1,4 @@
 //
-//  MessengerService.swift
 //  CatGrid
 //
 //  Created by Jeroen Dunselman on 02/04/2017.
@@ -15,7 +14,7 @@ protocol MessageView: NSObjectProtocol {
 }
 
 class GifService: NSObject, ParserClient {
-  var client: MessengerVC?
+  var client: CatGifVC?
   var urlService: Parser?
   var gifRequests:[GifRequest]? = []
   
@@ -30,7 +29,6 @@ class GifService: NSObject, ParserClient {
   func addRequest() {
     let resultUrl:String = (urlService?.urlString())!
     let request:GifRequest = GifRequest(url: resultUrl)
-    //  print("\(request.gifLocation)")
     request.downloadImage()
     gifRequests!.append(request)
   }
@@ -48,7 +46,6 @@ class GifService: NSObject, ParserClient {
     }
     
     //imgs failing, so step on it
-    print("GAS")
     makeRequest(num: 15)
     return nil
   }
@@ -68,15 +65,15 @@ class GifService: NSObject, ParserClient {
     return nil
   }
   
-  func rowInfo(row: Int) -> UIImage? {//String {
+  func rowInfo(row: Int) -> UIImage? {
     
-    //find assigned
+    //attempt already assigned to row
     let result: UIImage? = findImageFor(row: row)
     if !(result == nil){
       return result!
     }
     
-    //find available to assign to row
+    //attempt currently available to assign to row
     let available = availableImage(row: row)
     let testAvailable:Bool = (available != nil)
     if testAvailable {
@@ -86,21 +83,28 @@ class GifService: NSObject, ParserClient {
       }
       return nil
     }
-    //    return "\(row), \(boolTest), \(resultUrl)"
-    //    return ""
     return nil
   }
   
+  //    addSpecialRequest(row: row, view: view)
+//  (row: indexPath.row, imageView: cell.catView) {
+  func specialRequest(row: Int, imageView: UIImageView) {
+    let resultUrl:String = (urlService?.urlString())!
+    let request:GifRequest = GifRequest(url: resultUrl)
+    request.downloadImage(row: row, imageVw: imageView)
+    gifRequests!.append(request)
+  }
+  
   public func startLoading(msg: String) {
-//    print("MessengerService.parser.startLoading msg \(msg)")
-    client?.startLoading(msg: "Hi from MessengerService")
+    client?.startLoading(msg: "Hi from GifService")
   }
   func finishLoading(msg: String) {
-    print("MessengerService.parser.finishLoading msg \(msg)")
+    print("GifService.parser.finishLoading msg \(msg)")
+    
     //init availableItems
     self.gifRequests = []
   }
-  init(vc: MessengerVC) {
+  init(vc: CatGifVC) {
     super.init()
     client = vc
     urlService = Parser(client: self)

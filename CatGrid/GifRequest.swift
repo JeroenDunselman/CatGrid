@@ -10,7 +10,7 @@ import UIKit
 
 class GifRequest : NSObject {
   let gifLocation:String
-  var image:UIImage? // = nil
+  var image:UIImage?
   var urlRemote: URL!
   var finishedLoading: Bool = false
   var assignedToRow: Int?
@@ -31,6 +31,37 @@ class GifRequest : NSObject {
       self.finishedLoading = true
     }
   }
+  
+  func downloadImage(row: Int, imageVw:UIImageView) {
+    print("Download \(self.gifLocation)")
+    getDataFromUrl(url: self.urlRemote) { (data, response, error)  in
+      guard let data = data, error == nil else { return }
+      
+      DispatchQueue.main.async() { () -> Void in
+        self.image = UIImage.gifImageWithData(data)
+        imageVw.image = self.image
+      }
+      self.finishedLoading = true
+      self.assignedToRow = row
+    }
+  }
+    //1.0
+    
+//    DispatchQueue.global(qos: .userInitiated).async {
+//      if let imgResult = UIImage.gifImageWithURL(self.urlGif, storeItem: self) {
+//        print("downloaded from bg")
+//        //voorgrond
+//        DispatchQueue.main.async {
+//          imageVw.image = imgResult
+//          self.count()
+//          self.finishedLoading = true
+//        }
+//        //          item.image = imgResult
+//        //          item.stored = true
+//        //      item.downloadImage(url: item.imgURL, imageVw:cell.catView!)
+//      }
+//    }
+//  }
   
   func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
     URLSession.shared.dataTask(with: url) {

@@ -12,7 +12,7 @@ class GifRequest : NSObject {
   let gifLocation:String
   var image:UIImage?
   var urlRemote: URL!
-  var finishedLoading: Bool = false
+  var assignable: Bool = false
   var assignedToRow: Int?
   
   init(url: String) {
@@ -21,28 +21,29 @@ class GifRequest : NSObject {
   }
   
   func downloadImage() {
-    print("Download \(self.gifLocation)")
     getDataFromUrl(url: self.urlRemote) { (data, response, error)  in
       guard let data = data, error == nil else { return }
       
       DispatchQueue.main.async() { () -> Void in
         self.image = UIImage.gifImageWithData(data)
+        self.assignable = true
       }
-      self.finishedLoading = true
+      
     }
   }
   
-  func downloadImage(row: Int, imageVw:UIImageView) {
-    print("Download \(self.gifLocation)")
+  func downloadImage(row: Int, imageVw: UIImageView) {
     getDataFromUrl(url: self.urlRemote) { (data, response, error)  in
       guard let data = data, error == nil else { return }
       
       DispatchQueue.main.async() { () -> Void in
         self.image = UIImage.gifImageWithData(data)
         imageVw.image = self.image
+        
       }
-      self.finishedLoading = true
       self.assignedToRow = row
+//      self.assignable = true 
+      
     }
   }
   

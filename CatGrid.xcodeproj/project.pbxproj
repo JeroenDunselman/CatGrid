@@ -276,7 +276,7 @@
 				TargetAttributes = {
 					A9435B571E8AC00F00ECF4CE = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 447M47227T;
+						DevelopmentTeam = 5VGL2XRGNT;
 						ProvisioningStyle = Automatic;
 					};
 					A9435B6B1E8AC01000ECF4CE = {
@@ -554,7 +554,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 447M47227T;
+				DEVELOPMENT_TEAM = 5VGL2XRGNT;
 				INFOPLIST_FILE = CatGrid/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.onomatopee.CatGrid;
@@ -569,7 +569,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 447M47227T;
+				DEVELOPMENT_TEAM = 5VGL2XRGNT;
 				INFOPLIST_FILE = CatGrid/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.onomatopee.CatGrid;

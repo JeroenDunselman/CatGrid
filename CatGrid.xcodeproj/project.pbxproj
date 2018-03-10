@@ -19,7 +19,7 @@
 		A9563A0C1E8C1E3600806580 /* TextVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9563A0B1E8C1E3600806580 /* TextVC.swift */; };
 		A9C065AB1E90F28700651074 /* CatGifVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C065AA1E90F28700651074 /* CatGifVC.swift */; };
 		A9C065AD1E90F29E00651074 /* GifService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C065AC1E90F29E00651074 /* GifService.swift */; };
-		A9C065AF1E90F32600651074 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C065AE1E90F32600651074 /* Parser.swift */; };
+		A9C065AF1E90F32600651074 /* URLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C065AE1E90F32600651074 /* URLService.swift */; };
 		A9C065B11E911BBF00651074 /* GifRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C065B01E911BBF00651074 /* GifRequest.swift */; };
 		A9C9FD4C1E8B9B8B000D3804 /* CatTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9FD4B1E8B9B8B000D3804 /* CatTVCell.swift */; };
 		B1DA9AC7D7A402A9EB6AA1D7 /* Pods_CatGrid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A8EB9FDB2E78093BF92690 /* Pods_CatGrid.framework */; };
@@ -64,7 +64,7 @@
 		A9563A0B1E8C1E3600806580 /* TextVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextVC.swift; sourceTree = "<group>"; };
 		A9C065AA1E90F28700651074 /* CatGifVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatGifVC.swift; sourceTree = "<group>"; };
 		A9C065AC1E90F29E00651074 /* GifService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifService.swift; sourceTree = "<group>"; };
-		A9C065AE1E90F32600651074 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		A9C065AE1E90F32600651074 /* URLService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLService.swift; sourceTree = "<group>"; };
 		A9C065B01E911BBF00651074 /* GifRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifRequest.swift; sourceTree = "<group>"; };
 		A9C9FD4B1E8B9B8B000D3804 /* CatTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatTVCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -189,7 +189,7 @@
 			children = (
 				A9C065AC1E90F29E00651074 /* GifService.swift */,
 				A9C065B01E911BBF00651074 /* GifRequest.swift */,
-				A9C065AE1E90F32600651074 /* Parser.swift */,
+				A9C065AE1E90F32600651074 /* URLService.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -397,7 +397,7 @@
 			files = (
 				A9C9FD4C1E8B9B8B000D3804 /* CatTVCell.swift in Sources */,
 				A9C065B11E911BBF00651074 /* GifRequest.swift in Sources */,
-				A9C065AF1E90F32600651074 /* Parser.swift in Sources */,
+				A9C065AF1E90F32600651074 /* URLService.swift in Sources */,
 				A9C065AD1E90F29E00651074 /* GifService.swift in Sources */,
 				A92124C81E8F7C9300BF1A94 /* iOSDevCenters+GIF.swift in Sources */,
 				A9435B5C1E8AC00F00ECF4CE /* AppDelegate.swift in Sources */,

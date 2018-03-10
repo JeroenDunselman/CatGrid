@@ -42,8 +42,6 @@ class GifRequest : NSObject {
         
       }
       self.assignedToRow = row
-//      self.assignable = true 
-      
     }
   }
   

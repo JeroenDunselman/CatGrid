@@ -15,7 +15,7 @@ protocol MessageView: NSObjectProtocol {
 
 class GifService: NSObject, ParserClient {
   var client: CatGifVC?
-  var urlService: Parser?
+  var urlService: URLService?
   var gifRequests: [GifRequest] = []
   
   var replenishing = false
@@ -24,7 +24,7 @@ class GifService: NSObject, ParserClient {
   init(vc: CatGifVC) {
     super.init()
     client = vc
-    urlService = Parser(client: self)
+    urlService = URLService(client: self)
   }
   
   func findImageFor(row: Int) -> UIImage? {
@@ -115,57 +115,4 @@ class GifService: NSObject, ParserClient {
   }
 }
 
-//  func replenish() {
-//
-//    if gifRequests.count > 100 { return }
-////    pressure += 1
-////    if !replenishing {
-////      replenishing = true
-//      let size = 1 //+ pressure //max(25 - (gifRequests.count), 0) //12 //
-//
-//      if size > 0 {        print("replenish size: \(size)")}
-//      DispatchQueue.main.async() { () -> Void in
-//        for _ in 0..<size { self.request() }
-//        self.pressure = 0
-////        self.replenishing = false
-//      }
-////    }
-//  }
 
-//  func availableImage(row: Int) -> GifRequest? {
-//    let optionalRequests: [GifRequest]? = gifRequests
-//    let requests = optionalRequests ?? []
-//
-//    let freshIn = requests
-////      .filter{($0.finishedLoading)}
-//      .filter{($0.assignedToRow == nil)}
-//    if !freshIn.isEmpty {
-////      assign request to row
-//      freshIn.first?.assignedToRow = row
-//      return freshIn.first
-//    }
-//
-//    //imgs failing, so step on it
-//    makeRequest(num: 5)
-//    return nil
-//  }
-//  func rowInfo(row: Int) -> UIImage? {
-//
-//    //attempt already assigned to row
-//    let result: UIImage? = findImageFor(row: row)
-//    if !(result == nil){
-//      return result!
-//    }
-//
-//    //try currently available to assign to row
-//    let available = availableImage(row: row)  //: GifRequest
-//    let testAvailable:Bool = (available != nil)
-//    if testAvailable {
-//      let testImg: UIImage? = available!.image
-//      if !(testImg as UIImage! == nil) {
-//        return testImg
-//      }
-//      return nil
-//    }
-//    return nil
-//  }

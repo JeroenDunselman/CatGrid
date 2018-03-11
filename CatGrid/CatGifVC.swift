@@ -17,7 +17,7 @@ class CatGifVC: UIViewController {
   var service: GifService?
   
   let initialRequestTime: Double = 1.5
-  let defaultHeightImageWhileLoading = UIImage(named:"thin-1474_cat_pet-128")
+  let defaultImage = UIImage(named:"thin-1474_cat_pet-128")
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -45,7 +45,7 @@ class CatGifVC: UIViewController {
   func reloadAfterInitialRequestTime() {
     initTimer?.invalidate()
     
-    //    Initial buffer size is ( view.height / defaultHeightImageWhileLoading.height )
+    //    Initial buffer size is ( view.height / defaultImage.height )
     service?.unAssignAvailableImages()
     tableView.reloadData()
     tableView.isHidden = false
@@ -121,7 +121,7 @@ extension CatGifVC: UITableViewDataSource, UITableViewDelegate  {
       
     } else {
       //    Image fails, service buffer was increased.
-      resultImage = defaultHeightImageWhileLoading!
+      resultImage = defaultImage!
       
       //    Imageview of cell will update once requested image becomes available.
       //    But height for row can not update, unless cellForRow is reloaded.

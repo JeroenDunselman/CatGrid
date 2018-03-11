@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0BF181477F4335FFA2D7112C /* Pods_CatGrid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65ABBEB6DDDEEBC8CA4D5C1 /* Pods_CatGrid.framework */; };
 		A92124C81E8F7C9300BF1A94 /* iOSDevCenters+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92124C71E8F7C9300BF1A94 /* iOSDevCenters+GIF.swift */; };
-		A93F0A882055D05500BA6CEB /* iTunesArtwork@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = A93F0A872055D05500BA6CEB /* iTunesArtwork@1x.png */; };
 		A9435B5C1E8AC00F00ECF4CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9435B5B1E8AC00F00ECF4CE /* AppDelegate.swift */; };
 		A9435B611E8AC00F00ECF4CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9435B5F1E8AC00F00ECF4CE /* Main.storyboard */; };
 		A9435B631E8AC00F00ECF4CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9435B621E8AC00F00ECF4CE /* Assets.xcassets */; };
@@ -22,6 +21,7 @@
 		A9C065AD1E90F29E00651074 /* GifService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C065AC1E90F29E00651074 /* GifService.swift */; };
 		A9C065AF1E90F32600651074 /* URLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C065AE1E90F32600651074 /* URLService.swift */; };
 		A9C065B11E911BBF00651074 /* GifRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C065B01E911BBF00651074 /* GifRequest.swift */; };
+		A9C1E5292055DF400010F3FB /* Whiskers.png in Resources */ = {isa = PBXBuildFile; fileRef = A9C1E5282055DF400010F3FB /* Whiskers.png */; };
 		A9C9FD4C1E8B9B8B000D3804 /* CatTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9FD4B1E8B9B8B000D3804 /* CatTVCell.swift */; };
 		ACB38DDC709C9306896024BF /* Pods_CatGridUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9675AD09A7C13469AC540AD3 /* Pods_CatGridUITests.framework */; };
 		BFC2693001F709CD8E849DAA /* Pods_CatGridTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C0DE01E7232A6FC0BEF817 /* Pods_CatGridTests.framework */; };
@@ -50,7 +50,6 @@
 		9675AD09A7C13469AC540AD3 /* Pods_CatGridUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatGridUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C0DE01E7232A6FC0BEF817 /* Pods_CatGridTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatGridTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A92124C71E8F7C9300BF1A94 /* iOSDevCenters+GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "iOSDevCenters+GIF.swift"; sourceTree = "<group>"; };
-		A93F0A872055D05500BA6CEB /* iTunesArtwork@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@1x.png"; sourceTree = "<group>"; };
 		A9435B581E8AC00F00ECF4CE /* CatGrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatGrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9435B5B1E8AC00F00ECF4CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9435B601E8AC00F00ECF4CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,6 +68,7 @@
 		A9C065AC1E90F29E00651074 /* GifService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifService.swift; sourceTree = "<group>"; };
 		A9C065AE1E90F32600651074 /* URLService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLService.swift; sourceTree = "<group>"; };
 		A9C065B01E911BBF00651074 /* GifRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifRequest.swift; sourceTree = "<group>"; };
+		A9C1E5282055DF400010F3FB /* Whiskers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Whiskers.png; path = Assets.xcassets/Whiskers.png; sourceTree = "<group>"; };
 		A9C9FD4B1E8B9B8B000D3804 /* CatTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatTVCell.swift; sourceTree = "<group>"; };
 		C65ABBEB6DDDEEBC8CA4D5C1 /* Pods_CatGrid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatGrid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA184A0F1F31D367A9E8137E /* Pods-CatGrid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatGrid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CatGrid/Pods-CatGrid.debug.xcconfig"; sourceTree = "<group>"; };
@@ -194,8 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				A9435B621E8AC00F00ECF4CE /* Assets.xcassets */,
+				A9C1E5282055DF400010F3FB /* Whiskers.png */,
 				A9563A041E8BCBF600806580 /* thin-1474_cat_pet-128.png */,
-				A93F0A872055D05500BA6CEB /* iTunesArtwork@1x.png */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -351,7 +351,7 @@
 				A9435B661E8AC00F00ECF4CE /* LaunchScreen.storyboard in Resources */,
 				A9435B631E8AC00F00ECF4CE /* Assets.xcassets in Resources */,
 				A9435B611E8AC00F00ECF4CE /* Main.storyboard in Resources */,
-				A93F0A882055D05500BA6CEB /* iTunesArtwork@1x.png in Resources */,
+				A9C1E5292055DF400010F3FB /* Whiskers.png in Resources */,
 				A9563A051E8BCBF600806580 /* thin-1474_cat_pet-128.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

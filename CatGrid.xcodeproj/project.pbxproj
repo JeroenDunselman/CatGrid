@@ -15,7 +15,6 @@
 		A9435B661E8AC00F00ECF4CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9435B641E8AC00F00ECF4CE /* LaunchScreen.storyboard */; };
 		A9435B711E8AC01000ECF4CE /* CatGridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9435B701E8AC01000ECF4CE /* CatGridTests.swift */; };
 		A9435B7C1E8AC01000ECF4CE /* CatGridUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9435B7B1E8AC01000ECF4CE /* CatGridUITests.swift */; };
-		A9563A051E8BCBF600806580 /* thin-1474_cat_pet-128.png in Resources */ = {isa = PBXBuildFile; fileRef = A9563A041E8BCBF600806580 /* thin-1474_cat_pet-128.png */; };
 		A9563A0C1E8C1E3600806580 /* TextVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9563A0B1E8C1E3600806580 /* TextVC.swift */; };
 		A9C065AB1E90F28700651074 /* CatGifVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C065AA1E90F28700651074 /* CatGifVC.swift */; };
 		A9C065AD1E90F29E00651074 /* GifService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C065AC1E90F29E00651074 /* GifService.swift */; };
@@ -23,6 +22,7 @@
 		A9C065B11E911BBF00651074 /* GifRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C065B01E911BBF00651074 /* GifRequest.swift */; };
 		A9C1E5292055DF400010F3FB /* Whiskers.png in Resources */ = {isa = PBXBuildFile; fileRef = A9C1E5282055DF400010F3FB /* Whiskers.png */; };
 		A9C9FD4C1E8B9B8B000D3804 /* CatTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9FD4B1E8B9B8B000D3804 /* CatTVCell.swift */; };
+		A9E87DA02055E6EB00DE3D2E /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = A9E87D9F2055E6EB00DE3D2E /* default.png */; };
 		ACB38DDC709C9306896024BF /* Pods_CatGridUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9675AD09A7C13469AC540AD3 /* Pods_CatGridUITests.framework */; };
 		BFC2693001F709CD8E849DAA /* Pods_CatGridTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C0DE01E7232A6FC0BEF817 /* Pods_CatGridTests.framework */; };
 /* End PBXBuildFile section */
@@ -62,7 +62,6 @@
 		A9435B771E8AC01000ECF4CE /* CatGridUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatGridUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9435B7B1E8AC01000ECF4CE /* CatGridUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatGridUITests.swift; sourceTree = "<group>"; };
 		A9435B7D1E8AC01000ECF4CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9563A041E8BCBF600806580 /* thin-1474_cat_pet-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thin-1474_cat_pet-128.png"; sourceTree = "<group>"; };
 		A9563A0B1E8C1E3600806580 /* TextVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextVC.swift; sourceTree = "<group>"; };
 		A9C065AA1E90F28700651074 /* CatGifVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatGifVC.swift; sourceTree = "<group>"; };
 		A9C065AC1E90F29E00651074 /* GifService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifService.swift; sourceTree = "<group>"; };
@@ -70,6 +69,7 @@
 		A9C065B01E911BBF00651074 /* GifRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifRequest.swift; sourceTree = "<group>"; };
 		A9C1E5282055DF400010F3FB /* Whiskers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Whiskers.png; path = Assets.xcassets/Whiskers.png; sourceTree = "<group>"; };
 		A9C9FD4B1E8B9B8B000D3804 /* CatTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatTVCell.swift; sourceTree = "<group>"; };
+		A9E87D9F2055E6EB00DE3D2E /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = default.png; path = Assets.xcassets/default.png; sourceTree = "<group>"; };
 		C65ABBEB6DDDEEBC8CA4D5C1 /* Pods_CatGrid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatGrid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA184A0F1F31D367A9E8137E /* Pods-CatGrid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatGrid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CatGrid/Pods-CatGrid.debug.xcconfig"; sourceTree = "<group>"; };
 		D2F347F35051EBC64AE23D41 /* Pods-CatGridUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatGridUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CatGridUITests/Pods-CatGridUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -194,8 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				A9435B621E8AC00F00ECF4CE /* Assets.xcassets */,
+				A9E87D9F2055E6EB00DE3D2E /* default.png */,
 				A9C1E5282055DF400010F3FB /* Whiskers.png */,
-				A9563A041E8BCBF600806580 /* thin-1474_cat_pet-128.png */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -352,7 +352,7 @@
 				A9435B631E8AC00F00ECF4CE /* Assets.xcassets in Resources */,
 				A9435B611E8AC00F00ECF4CE /* Main.storyboard in Resources */,
 				A9C1E5292055DF400010F3FB /* Whiskers.png in Resources */,
-				A9563A051E8BCBF600806580 /* thin-1474_cat_pet-128.png in Resources */,
+				A9E87DA02055E6EB00DE3D2E /* default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

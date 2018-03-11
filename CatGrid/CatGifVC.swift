@@ -17,7 +17,7 @@ class CatGifVC: UIViewController {
   var service: GifService?
   
   let initialRequestTime: Double = 1.5
-  let defaultImage = UIImage(named:"thin-1474_cat_pet-128")
+  let defaultImage = UIImage(named:"default")
   
   override func viewDidLoad() {
     super.viewDidLoad()

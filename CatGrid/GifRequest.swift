@@ -9,39 +9,42 @@ import Foundation
 import UIKit
 
 class GifRequest : NSObject {
-  let gifLocation:String
+  
   var image:UIImage?
-  var urlRemote: URL!
-  var assignable: Bool = false
+  var url: URL!
+  var finished: Bool = false
   var assignedToRow: Int?
   
-  init(url: String) {
-    gifLocation = url
-    urlRemote = URL(string: gifLocation)
+  init(gifLocation: String) {
+    url = URL(string: gifLocation)
   }
   
   func downloadImage() {
-    getDataFromUrl(url: self.urlRemote) { (data, response, error)  in
+    getDataFromUrl(url: self.url) { (data, response, error)  in
       guard let data = data, error == nil else { return }
       
       DispatchQueue.main.async() { () -> Void in
         self.image = UIImage.gifImageWithData(data)
-        self.assignable = true
+        //  Make image available to any row once downloaded.
+        self.finished = true
       }
       
     }
   }
   
   func downloadImage(row: Int, imageVw: UIImageView) {
-    getDataFromUrl(url: self.urlRemote) { (data, response, error)  in
+    getDataFromUrl(url: self.url) { (data, response, error)  in
       guard let data = data, error == nil else { return }
+      
+      //  Claim request for row.
+      self.assignedToRow = row
       
       DispatchQueue.main.async() { () -> Void in
         self.image = UIImage.gifImageWithData(data)
+        //  Update view once downloaded.
         imageVw.image = self.image
-        
       }
-      self.assignedToRow = row
+
     }
   }
   

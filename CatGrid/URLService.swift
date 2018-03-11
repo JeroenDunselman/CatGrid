@@ -8,84 +8,73 @@
 
 import Foundation
 
-protocol ParserClient: NSObjectProtocol {
-  func parseStarted(msg: String)
-  func initialParseFinished(msg: String)
-  func parseFinished(msg: String)
-}
-
 class URLService : NSObject {
   
-  var parser = XMLParser()
+  //  Requests and replenishes urls of gifs of cats by batch.
+  var catAPIBaseURL = ""
+  let batchSize: Int = 50
+  var threshHoldSize: Int = 0
+  
+  //  Parses responses.
+  let elementNameOfCatGifUrl = "image"
+  let keyNameOfCatGifUrl = "url"
   var elements = NSMutableDictionary()
   var element = NSString()
   var resultURL = NSMutableString()
-  
-  var catAPIBaseURL = ""
-  let batchSize: Int = 40
-  var threshHold: Int = 0
-  
-  let elementNameOfCatGifUrl:String = "image"
-  let keyNameOfCatGifUrl:String = "url"
-  
   public var parseResult:[String] = []
-  var client: GifService?
-
+  
+  //  Makes unique urls available to client.
   var urlsServed: [String] = []
-
+  var client: GifService?
+  
   init (client: GifService) {
     super.init()
     
     self.client = client
-    client.parseStarted(msg: "Hi from parser init()")
-    
     catAPIBaseURL = String("http://thecatapi.com/api/images/get?format=xml&results_per_page=\(batchSize)&type=gif")
-    
-    threshHold = self.batchSize / 2
+    threshHoldSize = self.batchSize / 2
     beginParsing(initializing: true)
   }
   
-  func urlString() -> String? {
+  func url() -> String? {
 
-    // replenish? check size
-    if parseResult.count < threshHold {
-      // trigger next batch
+    //  Replenish? Check size.
+    if parseResult.count < threshHoldSize {
+      //  Trigger next batch.
       self.beginParsing(initializing: false)
     }
 
-    //make sure urlString is fresh
+    //  Only fresh urls.
     while parseResult.count > 0 {
       let result = parseResult.removeFirst()
       
-      //return only if not previously viewed
+      //  Return if not previously served.
       if !urlsServed.contains(result) {
-        //track served urls for future reference
+        //  Register served urls for future reference.
         urlsServed.append(result)
+        
         return result
-      }// else { print("rejected url urlsServed \(urlsServed)") }
+      } 
     }
     
     return nil
   }
+  
 }
 
 extension URLService: XMLParserDelegate {
 
   func beginParsing(initializing: Bool) {
-    
-    self.parser = XMLParser(contentsOf:(URL(string:self.catAPIBaseURL))!)!
-    self.parser.delegate = self
-    self.parser.parse()
-    if !initializing {
-      self.client?.parseFinished(msg: "Hi from parser after parse")
-      
-    } else {
-      self.client?.initialParseFinished(msg: "Hi from parser after initial parse")
-    }
+    print("begin Parse")
+    var parser = XMLParser()
+    parser = XMLParser(contentsOf:(URL(string:self.catAPIBaseURL))!)!
+    parser.delegate = self
+    parser.parse()
     
   }
   
   func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
+    
     element = elementName as NSString
     if (elementName as NSString).isEqual(to: elementNameOfCatGifUrl)
     {

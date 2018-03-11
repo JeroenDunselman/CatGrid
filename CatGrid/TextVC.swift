@@ -54,9 +54,9 @@ extension UIWebView {
       
       // Load response string to self
       let responseString = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
-      self.loadHTMLString(responseString! as String, baseURL: nil)
       
       DispatchQueue.main.async {
+        self.loadHTMLString(responseString! as String, baseURL: nil)
         vc.presentView()
       }
     }

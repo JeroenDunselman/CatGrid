@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		0BF181477F4335FFA2D7112C /* Pods_CatGrid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65ABBEB6DDDEEBC8CA4D5C1 /* Pods_CatGrid.framework */; };
 		A92124C81E8F7C9300BF1A94 /* iOSDevCenters+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92124C71E8F7C9300BF1A94 /* iOSDevCenters+GIF.swift */; };
+		A93F0A882055D05500BA6CEB /* iTunesArtwork@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = A93F0A872055D05500BA6CEB /* iTunesArtwork@1x.png */; };
 		A9435B5C1E8AC00F00ECF4CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9435B5B1E8AC00F00ECF4CE /* AppDelegate.swift */; };
 		A9435B611E8AC00F00ECF4CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9435B5F1E8AC00F00ECF4CE /* Main.storyboard */; };
 		A9435B631E8AC00F00ECF4CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9435B621E8AC00F00ECF4CE /* Assets.xcassets */; };
 		A9435B661E8AC00F00ECF4CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9435B641E8AC00F00ECF4CE /* LaunchScreen.storyboard */; };
 		A9435B711E8AC01000ECF4CE /* CatGridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9435B701E8AC01000ECF4CE /* CatGridTests.swift */; };
 		A9435B7C1E8AC01000ECF4CE /* CatGridUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9435B7B1E8AC01000ECF4CE /* CatGridUITests.swift */; };
-		A9563A031E8BC5A300806580 /* tartan-cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A9563A021E8BC5A300806580 /* tartan-cat.jpg */; };
 		A9563A051E8BCBF600806580 /* thin-1474_cat_pet-128.png in Resources */ = {isa = PBXBuildFile; fileRef = A9563A041E8BCBF600806580 /* thin-1474_cat_pet-128.png */; };
 		A9563A0C1E8C1E3600806580 /* TextVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9563A0B1E8C1E3600806580 /* TextVC.swift */; };
 		A9C065AB1E90F28700651074 /* CatGifVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C065AA1E90F28700651074 /* CatGifVC.swift */; };
@@ -50,6 +50,7 @@
 		9675AD09A7C13469AC540AD3 /* Pods_CatGridUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatGridUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C0DE01E7232A6FC0BEF817 /* Pods_CatGridTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatGridTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A92124C71E8F7C9300BF1A94 /* iOSDevCenters+GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "iOSDevCenters+GIF.swift"; sourceTree = "<group>"; };
+		A93F0A872055D05500BA6CEB /* iTunesArtwork@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@1x.png"; sourceTree = "<group>"; };
 		A9435B581E8AC00F00ECF4CE /* CatGrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatGrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9435B5B1E8AC00F00ECF4CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9435B601E8AC00F00ECF4CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,7 +63,6 @@
 		A9435B771E8AC01000ECF4CE /* CatGridUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatGridUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9435B7B1E8AC01000ECF4CE /* CatGridUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatGridUITests.swift; sourceTree = "<group>"; };
 		A9435B7D1E8AC01000ECF4CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9563A021E8BC5A300806580 /* tartan-cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tartan-cat.jpg"; sourceTree = "<group>"; };
 		A9563A041E8BCBF600806580 /* thin-1474_cat_pet-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thin-1474_cat_pet-128.png"; sourceTree = "<group>"; };
 		A9563A0B1E8C1E3600806580 /* TextVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextVC.swift; sourceTree = "<group>"; };
 		A9C065AA1E90F28700651074 /* CatGifVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatGifVC.swift; sourceTree = "<group>"; };
@@ -128,6 +128,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A93F0A862055CC5600BA6CEB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A9C9FD4B1E8B9B8B000D3804 /* CatTVCell.swift */,
+				A9C065AA1E90F28700651074 /* CatGifVC.swift */,
+				A92124C71E8F7C9300BF1A94 /* iOSDevCenters+GIF.swift */,
+				A9563A0B1E8C1E3600806580 /* TextVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		A9435B4F1E8AC00F00ECF4CE = {
 			isa = PBXGroup;
 			children = (
@@ -155,8 +166,6 @@
 			children = (
 				A9C065B21E91426400651074 /* v2 */,
 				A9563A061E8BCE9D00806580 /* Assets */,
-				A9435B5F1E8AC00F00ECF4CE /* Main.storyboard */,
-				A9435B641E8AC00F00ECF4CE /* LaunchScreen.storyboard */,
 				A9435B5B1E8AC00F00ECF4CE /* AppDelegate.swift */,
 				A9435B671E8AC01000ECF4CE /* Info.plist */,
 			);
@@ -185,8 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				A9435B621E8AC00F00ECF4CE /* Assets.xcassets */,
-				A9563A021E8BC5A300806580 /* tartan-cat.jpg */,
 				A9563A041E8BCBF600806580 /* thin-1474_cat_pet-128.png */,
+				A93F0A872055D05500BA6CEB /* iTunesArtwork@1x.png */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -194,29 +203,28 @@
 		A9C065B21E91426400651074 /* v2 */ = {
 			isa = PBXGroup;
 			children = (
-				A9C065B31E91429A00651074 /* model */,
+				A9C065B31E91429A00651074 /* Model */,
 				A9C065B41E9142A800651074 /* View */,
+				A93F0A862055CC5600BA6CEB /* Controller */,
 			);
 			name = v2;
 			sourceTree = "<group>";
 		};
-		A9C065B31E91429A00651074 /* model */ = {
+		A9C065B31E91429A00651074 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				A9C065AC1E90F29E00651074 /* GifService.swift */,
 				A9C065B01E911BBF00651074 /* GifRequest.swift */,
 				A9C065AE1E90F32600651074 /* URLService.swift */,
 			);
-			name = model;
+			name = Model;
 			sourceTree = "<group>";
 		};
 		A9C065B41E9142A800651074 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A9C065AA1E90F28700651074 /* CatGifVC.swift */,
-				A9C9FD4B1E8B9B8B000D3804 /* CatTVCell.swift */,
-				A92124C71E8F7C9300BF1A94 /* iOSDevCenters+GIF.swift */,
-				A9563A0B1E8C1E3600806580 /* TextVC.swift */,
+				A9435B5F1E8AC00F00ECF4CE /* Main.storyboard */,
+				A9435B641E8AC00F00ECF4CE /* LaunchScreen.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -293,7 +301,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Jeroen Dunselman";
 				TargetAttributes = {
 					A9435B571E8AC00F00ECF4CE = {
@@ -340,10 +348,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9563A031E8BC5A300806580 /* tartan-cat.jpg in Resources */,
 				A9435B661E8AC00F00ECF4CE /* LaunchScreen.storyboard in Resources */,
 				A9435B631E8AC00F00ECF4CE /* Assets.xcassets in Resources */,
 				A9435B611E8AC00F00ECF4CE /* Main.storyboard in Resources */,
+				A93F0A882055D05500BA6CEB /* iTunesArtwork@1x.png in Resources */,
 				A9563A051E8BCBF600806580 /* thin-1474_cat_pet-128.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -590,7 +598,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -598,7 +608,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -639,7 +653,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -647,7 +663,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

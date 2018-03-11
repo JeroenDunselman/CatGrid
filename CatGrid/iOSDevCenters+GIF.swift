@@ -63,7 +63,7 @@ extension UIImage {
     }
     
     class func delayForImageAtIndex(_ index: Int, source: CGImageSource!) -> Double {
-        var delay = 0.1
+        let delay = 0.1
 //      MARK - jd: Runtime error, purpose not yet documented
       
 //        let cfProperties = CGImageSourceCopyPropertiesAtIndex(source, index, nil)

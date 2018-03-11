@@ -42,7 +42,7 @@ class CatGifVC: UIViewController {
     initTimer = Timer.scheduledTimer(timeInterval: initialRequestTime, target:self, selector: #selector(self.reloadAfterInitialRequestTime), userInfo: nil, repeats: true)
   }
   
-  func reloadAfterInitialRequestTime() {
+  @objc func reloadAfterInitialRequestTime() {
     initTimer?.invalidate()
     
     //    Initial buffer size is ( view.height / defaultImage.height )
@@ -66,7 +66,7 @@ class CatGifVC: UIViewController {
     activityIndicatorTop.isHidden = true
   }
   
-  func reenableRefresh() {
+  @objc func reenableRefresh() {
     timeOutTimer?.invalidate()
     timeOutTimer = nil
     

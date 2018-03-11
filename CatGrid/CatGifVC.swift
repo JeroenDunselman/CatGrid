@@ -39,7 +39,7 @@ class CatGifVC: UIViewController {
     //    Showing initial default rowheights is prevented by allowing initialRequestTime.
     tableView.isHidden = true
     
-    initTimer = Timer.scheduledTimer(timeInterval: initialRequestTime, target:self, selector: #selector(self.reloadAfterInitialRequestTime), userInfo: nil, repeats: true)
+    initTimer = Timer.scheduledTimer(timeInterval: initialRequestTime, target:self, selector: #selector(reloadAfterInitialRequestTime), userInfo: nil, repeats: true)
   }
   
   @objc func reloadAfterInitialRequestTime() {
@@ -56,10 +56,10 @@ class CatGifVC: UIViewController {
   func refreshTableView() {
     
     let timeOut: Double = 1
-    timeOutTimer = Timer.scheduledTimer(timeInterval: timeOut, target:self, selector: #selector(self.reenableRefresh), userInfo: nil, repeats: true)
+    timeOutTimer = Timer.scheduledTimer(timeInterval: timeOut, target:self, selector: #selector(reenableRefresh), userInfo: nil, repeats: true)
 
     //    Update view.
-    self.service?.refresh()
+    service?.refresh()
     tableView.reloadData()
 
     activityIndicatorBottom.isHidden = true
@@ -86,7 +86,7 @@ extension CatGifVC: UIScrollViewDelegate {
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
     
     //    Prevent repeat refresh for same swipe.
-    if !(self.timeOutTimer == nil) {return}
+    if !(timeOutTimer == nil) {return}
     
     let pullDistance: CGFloat = 100
     
@@ -98,7 +98,7 @@ extension CatGifVC: UIScrollViewDelegate {
     let triggeredForTopScroll:Bool =  scrollView.contentOffset.y < -(pullDistance)
     
     if (triggeredForBottomScroll || triggeredForTopScroll) {
-      self.refreshTableView()
+      refreshTableView()
     }
   }
   
@@ -116,7 +116,7 @@ extension CatGifVC: UITableViewDataSource, UITableViewDelegate  {
     let cell: CatTVCell = tableView.dequeueReusableCell(withIdentifier: "CatCell", for: indexPath) as! CatTVCell
     
     
-    if let availableImage: UIImage = self.service?.findImageFor(row: indexPath.row) {
+    if let availableImage: UIImage = service?.findImageFor(row: indexPath.row) {
       resultImage = availableImage
       
     } else {
@@ -125,7 +125,7 @@ extension CatGifVC: UITableViewDataSource, UITableViewDelegate  {
       
       //    Imageview of cell will update once requested image becomes available.
       //    But height for row can not update, unless cellForRow is reloaded.
-      self.service?.request(row: indexPath.row, imageView: cell.catView)
+      service?.request(requestRow: indexPath.row, updateView: cell.catView)
     }
     
     cell.catView.image = resultImage

@@ -20,7 +20,7 @@ class GifRequest : NSObject {
   }
   
   func downloadImage() {
-    getDataFromUrl(url: self.url) { (data, response, error)  in
+    getDataFromUrl(url: url) { (data, response, error)  in
       guard let data = data, error == nil else { return }
       
       DispatchQueue.main.async() { () -> Void in
@@ -32,18 +32,18 @@ class GifRequest : NSObject {
   }
   
   func downloadImage(row: Int, imageVw: UIImageView) {
-    getDataFromUrl(url: self.url) { (data, response, error)  in
+    getDataFromUrl(url: url) { (data, response, error)  in
       guard let data = data, error == nil else { return }
       
       //  Claim request for row.
       self.assignedToRow = row
       
       DispatchQueue.main.async() { () -> Void in
-        self.image = UIImage.gifImageWithData(data)
-        self.finished = true
-        
         //  Update view once downloaded.
-        imageVw.image = self.image
+        imageVw.image  = UIImage.gifImageWithData(data)
+        self.finished = true
+        //  Store.
+        self.image = imageVw.image
       }
 
     }

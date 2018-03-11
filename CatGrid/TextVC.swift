@@ -13,14 +13,14 @@ class TextVC: UIViewController, ActivityView {
 
   @IBOutlet weak var activityView: UIActivityIndicatorView!
   @IBAction func actionDone(_ sender: Any) {
-    self.dismiss(animated: true, completion: nil)
+    dismiss(animated: true, completion: nil)
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.activityView.startAnimating()
-    self.webView.isHidden = true
-    self.webView.showLoremScript(vc: self)
+    activityView.startAnimating()
+    webView.isHidden = true
+    webView.showLoremScript(vc: self)
   }
   
   override func didReceiveMemoryWarning() {

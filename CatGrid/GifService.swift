@@ -18,7 +18,7 @@ class GifService: NSObject {
     super.init()
     
     client = viewcontroller
-    urlService = URLService(client: self)
+    urlService = URLService()
   }
   
   func findImageFor(row: Int) -> UIImage? {
@@ -26,7 +26,7 @@ class GifService: NSObject {
     //  Check if a request was already assigned to row.
     let requestForRow = gifRequests.filter{($0.assignedToRow == row)}
     if !requestForRow.isEmpty { //
-      print("found request assigned to row \(row).\(gifRequests.count)")
+    //  print("found request assigned to row \(row).\(gifRequests.count)")
       
       //  In case specialrequest, returned img might be nil unless request finished.
       return requestForRow.first?.image
@@ -37,7 +37,7 @@ class GifService: NSObject {
       .filter{($0.finished)}
       .filter{($0.assignedToRow == nil)}
       if !freshIn.isEmpty { //
-        print("found img assignable to row \(row).\(gifRequests.count)")
+      //  print("found img assignable to row \(row).\(gifRequests.count)")
 
       //  Check out.
       freshIn.first?.assignedToRow = row
@@ -61,7 +61,7 @@ class GifService: NSObject {
       gifRequests.append(request)
   }
 
-  func request(row: Int, imageView: UIImageView) {
+  func request(requestRow row: Int, updateView imageView: UIImageView) {
     
     //  Prevent repeating request for recurring row.
     if (!gifRequests.filter{($0.assignedToRow == row)}.isEmpty) {return}
@@ -77,7 +77,7 @@ class GifService: NSObject {
   //  Init gifRequests, retain unviewed.
   func refresh() {
     gifRequests = gifRequests.filter{($0.assignedToRow == nil)}
-    //    print("gifRequests.count after refresh: \(gifRequests.count)")
+    //  print("gifRequests.count after refresh: \(gifRequests.count)")
   }
   
   func unAssignAvailableImages() {

@@ -25,15 +25,13 @@ class URLService : NSObject {
   
   //  Makes unique urls available to client.
   var urlsServed: [String] = []
-  var client: GifService?
   
-  init (client: GifService) {
+  override init () {
     super.init()
     
-    self.client = client
     catAPIBaseURL = String("http://thecatapi.com/api/images/get?format=xml&results_per_page=\(batchSize)&type=gif")
     
-    threshHoldSize = self.batchSize / 2
+    threshHoldSize = batchSize / 2
     beginParsing(initializing: true)
   }
   
@@ -42,7 +40,7 @@ class URLService : NSObject {
     //  Replenish? Check size.
     if parseResult.count < threshHoldSize {
       //  Trigger next batch.
-      self.beginParsing(initializing: false)
+      beginParsing(initializing: false)
     }
 
     //  Only fresh urls.
@@ -68,7 +66,7 @@ extension URLService: XMLParserDelegate {
   func beginParsing(initializing: Bool) {
     var parser = XMLParser()
 
-    parser = XMLParser(contentsOf:(URL(string:self.catAPIBaseURL))!)!
+    parser = XMLParser(contentsOf:(URL(string:catAPIBaseURL))!)!
     parser.delegate = self
     parser.parse()
   }

@@ -32,6 +32,7 @@ class URLService : NSObject {
     
     self.client = client
     catAPIBaseURL = String("http://thecatapi.com/api/images/get?format=xml&results_per_page=\(batchSize)&type=gif")
+    
     threshHoldSize = self.batchSize / 2
     beginParsing(initializing: true)
   }
@@ -65,12 +66,11 @@ class URLService : NSObject {
 extension URLService: XMLParserDelegate {
 
   func beginParsing(initializing: Bool) {
-    print("begin Parse")
     var parser = XMLParser()
+
     parser = XMLParser(contentsOf:(URL(string:self.catAPIBaseURL))!)!
     parser.delegate = self
     parser.parse()
-    
   }
   
   func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {

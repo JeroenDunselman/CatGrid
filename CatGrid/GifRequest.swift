@@ -25,7 +25,6 @@ class GifRequest : NSObject {
       
       DispatchQueue.main.async() { () -> Void in
         self.image = UIImage.gifImageWithData(data)
-        //  Make image available to any row once downloaded.
         self.finished = true
       }
       
@@ -41,6 +40,8 @@ class GifRequest : NSObject {
       
       DispatchQueue.main.async() { () -> Void in
         self.image = UIImage.gifImageWithData(data)
+        self.finished = true
+        
         //  Update view once downloaded.
         imageVw.image = self.image
       }

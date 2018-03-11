@@ -15,33 +15,51 @@ class CatGifVC: UIViewController {
   @IBOutlet weak var tableView: UITableView!
   
   var service: GifService?
-  let defaultImgWhileLoading = UIImage(named:"thin-1474_cat_pet-128")
+  
+  let initialRequestTime: Double = 1.5
+  let defaultHeightImageWhileLoading = UIImage(named:"thin-1474_cat_pet-128")
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     activityIndicatorTop.startAnimating()
     activityIndicatorBottom.startAnimating()
-    service = GifService(vc: self)
+    service = GifService(viewcontroller: self)
     
-    tableView.delegate = self
-    tableView.dataSource = self
-    
-    let preferredEstimatedRowHeightForTestedBufferSize: CGFloat = 120
-    tableView!.estimatedRowHeight = preferredEstimatedRowHeightForTestedBufferSize
+    tableView!.estimatedRowHeight = 120
     tableView!.rowHeight = UITableViewAutomaticDimension
     
+    //  Allow initial request time.
+    initializeTableView()
+  }
+  
+  var initTimer:Timer?
+  func initializeTableView() {
+    
+    //    Showing initial default rowheights is prevented by allowing initialRequestTime.
+    tableView.isHidden = true
+    
+    initTimer = Timer.scheduledTimer(timeInterval: initialRequestTime, target:self, selector: #selector(self.reloadAfterInitialRequestTime), userInfo: nil, repeats: true)
+  }
+  
+  func reloadAfterInitialRequestTime() {
+    initTimer?.invalidate()
+    
+    //    Initial buffer size is ( view.height / defaultHeightImageWhileLoading.height )
+    service?.unAssignAvailableImages()
+    tableView.reloadData()
+    tableView.isHidden = false
   }
   
   //    View fresh batch.
   var timeOutTimer: Timer?
-  func refresh() {
+  func refreshTableView() {
     
     let timeOut: Double = 1
     timeOutTimer = Timer.scheduledTimer(timeInterval: timeOut, target:self, selector: #selector(self.reenableRefresh), userInfo: nil, repeats: true)
 
     //    Update view.
-    service?.refresh()
+    self.service?.refresh()
     tableView.reloadData()
 
     activityIndicatorBottom.isHidden = true
@@ -49,7 +67,9 @@ class CatGifVC: UIViewController {
   }
   
   func reenableRefresh() {
+    timeOutTimer?.invalidate()
     timeOutTimer = nil
+    
     activityIndicatorBottom.isHidden = false
     activityIndicatorTop.isHidden = false
   }
@@ -78,7 +98,7 @@ extension CatGifVC: UIScrollViewDelegate {
     let triggeredForTopScroll:Bool =  scrollView.contentOffset.y < -(pullDistance)
     
     if (triggeredForBottomScroll || triggeredForTopScroll) {
-      self.refresh()
+      self.refreshTableView()
     }
   }
   
@@ -92,18 +112,20 @@ extension CatGifVC: UITableViewDataSource, UITableViewDelegate  {
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
+    var resultImage: UIImage
     let cell: CatTVCell = tableView.dequeueReusableCell(withIdentifier: "CatCell", for: indexPath) as! CatTVCell
     
-    var resultImage: UIImage
+    
     if let availableImage: UIImage = self.service?.findImageFor(row: indexPath.row) {
       resultImage = availableImage
-    } else {
-      //    Supply temp img.
-      resultImage = self.defaultImgWhileLoading!
       
-      //    Create request that will update imageview of cell once image becomes available.
-      //    Height will be default unless row reloads after image becomes available.
-      self.service?.specialRequest(row: indexPath.row, imageView: cell.catView)
+    } else {
+      //    Image fails, service buffer was increased.
+      resultImage = defaultHeightImageWhileLoading!
+      
+      //    Imageview of cell will update once requested image becomes available.
+      //    But height for row can not update, unless cellForRow is reloaded.
+      self.service?.request(row: indexPath.row, imageView: cell.catView)
     }
     
     cell.catView.image = resultImage
@@ -111,6 +133,3 @@ extension CatGifVC: UITableViewDataSource, UITableViewDelegate  {
   
   }
 }
-
-
-

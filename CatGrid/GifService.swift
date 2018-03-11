@@ -14,10 +14,10 @@ class GifService: NSObject {
   var urlService: URLService?
   var gifRequests: [GifRequest] = []
   
-  init(vc: CatGifVC) {
+  init(viewcontroller: CatGifVC) {
     super.init()
     
-    client = vc
+    client = viewcontroller
     urlService = URLService(client: self)
   }
   
@@ -25,8 +25,8 @@ class GifService: NSObject {
     
     //  Check if a request was already assigned to row.
     let requestForRow = gifRequests.filter{($0.assignedToRow == row)}
-    if !requestForRow.isEmpty {
-      //      print("found request assigned to row \(row).\(gifRequests.count)")
+    if !requestForRow.isEmpty { //
+      print("found request assigned to row \(row).\(gifRequests.count)")
       
       //  In case specialrequest, returned img might be nil unless request finished.
       return requestForRow.first?.image
@@ -36,8 +36,8 @@ class GifService: NSObject {
     let freshIn = gifRequests
       .filter{($0.finished)}
       .filter{($0.assignedToRow == nil)}
-    if !freshIn.isEmpty {
-      //      print("found img assignable to row \(row).\(gifRequests.count)")
+      if !freshIn.isEmpty { //
+        print("found img assignable to row \(row).\(gifRequests.count)")
 
       //  Check out.
       freshIn.first?.assignedToRow = row
@@ -47,7 +47,7 @@ class GifService: NSObject {
       return freshIn.first?.image
     }
     
-    //  Replenish.
+    //  Increase buffer size.
     request()
     //  Image fails.
     return nil
@@ -61,7 +61,7 @@ class GifService: NSObject {
       gifRequests.append(request)
   }
 
-  func specialRequest(row: Int, imageView: UIImageView) {
+  func request(row: Int, imageView: UIImageView) {
     
     //  Prevent repeating request for recurring row.
     if (!gifRequests.filter{($0.assignedToRow == row)}.isEmpty) {return}
@@ -72,16 +72,20 @@ class GifService: NSObject {
     
     //  Supply the imageview of requesting cell, to show image in once it becomes available.
     request.downloadImage(row: row, imageVw: imageView)
-    
-    //    print("specialRequest gifRequests.count: \(gifRequests.count)")
   }
   
   //  Init gifRequests, retain unviewed.
   func refresh() {
-    self.gifRequests = self.gifRequests.filter{($0.assignedToRow == nil)}
+    gifRequests = gifRequests.filter{($0.assignedToRow == nil)}
     //    print("gifRequests.count after refresh: \(gifRequests.count)")
   }
   
+  func unAssignAvailableImages() {
+    for request in gifRequests.filter({($0.finished)}) {
+      request.assignedToRow = nil
+    }
+  }
+
 }
 
 

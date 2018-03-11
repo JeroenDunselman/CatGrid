@@ -107,7 +107,6 @@ extension CatGifVC: UITableViewDataSource, UITableViewDelegate  {
     }
     
     cell.catView.image = resultImage
-    
     return cell as CatTVCell
   
   }

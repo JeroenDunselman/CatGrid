@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BF181477F4335FFA2D7112C /* Pods_CatGrid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65ABBEB6DDDEEBC8CA4D5C1 /* Pods_CatGrid.framework */; };
 		A92124C81E8F7C9300BF1A94 /* iOSDevCenters+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92124C71E8F7C9300BF1A94 /* iOSDevCenters+GIF.swift */; };
 		A9435B5C1E8AC00F00ECF4CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9435B5B1E8AC00F00ECF4CE /* AppDelegate.swift */; };
 		A9435B611E8AC00F00ECF4CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9435B5F1E8AC00F00ECF4CE /* Main.storyboard */; };
@@ -22,7 +23,8 @@
 		A9C065AF1E90F32600651074 /* URLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C065AE1E90F32600651074 /* URLService.swift */; };
 		A9C065B11E911BBF00651074 /* GifRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C065B01E911BBF00651074 /* GifRequest.swift */; };
 		A9C9FD4C1E8B9B8B000D3804 /* CatTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9FD4B1E8B9B8B000D3804 /* CatTVCell.swift */; };
-		B1DA9AC7D7A402A9EB6AA1D7 /* Pods_CatGrid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A8EB9FDB2E78093BF92690 /* Pods_CatGrid.framework */; };
+		ACB38DDC709C9306896024BF /* Pods_CatGridUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9675AD09A7C13469AC540AD3 /* Pods_CatGridUITests.framework */; };
+		BFC2693001F709CD8E849DAA /* Pods_CatGridTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C0DE01E7232A6FC0BEF817 /* Pods_CatGridTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,9 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07238825E3A8CC5319670BDF /* Pods-CatGrid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatGrid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CatGrid/Pods-CatGrid.debug.xcconfig"; sourceTree = "<group>"; };
-		77A8EB9FDB2E78093BF92690 /* Pods_CatGrid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatGrid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9CE96C739A404354F6E1A877 /* Pods-CatGrid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatGrid.release.xcconfig"; path = "Pods/Target Support Files/Pods-CatGrid/Pods-CatGrid.release.xcconfig"; sourceTree = "<group>"; };
+		44194C460CE9CC3AE4E70DFB /* Pods-CatGridTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatGridTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CatGridTests/Pods-CatGridTests.release.xcconfig"; sourceTree = "<group>"; };
+		6045733246D1038EFFE9D428 /* Pods-CatGrid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatGrid.release.xcconfig"; path = "Pods/Target Support Files/Pods-CatGrid/Pods-CatGrid.release.xcconfig"; sourceTree = "<group>"; };
+		9675AD09A7C13469AC540AD3 /* Pods_CatGridUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatGridUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3C0DE01E7232A6FC0BEF817 /* Pods_CatGridTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatGridTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A92124C71E8F7C9300BF1A94 /* iOSDevCenters+GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "iOSDevCenters+GIF.swift"; sourceTree = "<group>"; };
 		A9435B581E8AC00F00ECF4CE /* CatGrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatGrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9435B5B1E8AC00F00ECF4CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +70,11 @@
 		A9C065AE1E90F32600651074 /* URLService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLService.swift; sourceTree = "<group>"; };
 		A9C065B01E911BBF00651074 /* GifRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifRequest.swift; sourceTree = "<group>"; };
 		A9C9FD4B1E8B9B8B000D3804 /* CatTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatTVCell.swift; sourceTree = "<group>"; };
+		C65ABBEB6DDDEEBC8CA4D5C1 /* Pods_CatGrid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatGrid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA184A0F1F31D367A9E8137E /* Pods-CatGrid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatGrid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CatGrid/Pods-CatGrid.debug.xcconfig"; sourceTree = "<group>"; };
+		D2F347F35051EBC64AE23D41 /* Pods-CatGridUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatGridUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CatGridUITests/Pods-CatGridUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E34B14D69341A6796E28CEF7 /* Pods-CatGridUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatGridUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CatGridUITests/Pods-CatGridUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F0D70A61B01D06C0F0A29DB5 /* Pods-CatGridTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatGridTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CatGridTests/Pods-CatGridTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1DA9AC7D7A402A9EB6AA1D7 /* Pods_CatGrid.framework in Frameworks */,
+				0BF181477F4335FFA2D7112C /* Pods_CatGrid.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFC2693001F709CD8E849DAA /* Pods_CatGridTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,27 +98,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACB38DDC709C9306896024BF /* Pods_CatGridUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		05C3D57377341335B1E2099B /* Frameworks */ = {
+		3F1177927A6638B56AECD9D9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				77A8EB9FDB2E78093BF92690 /* Pods_CatGrid.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		3A1B81AC59A8388DE84D54AF /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				07238825E3A8CC5319670BDF /* Pods-CatGrid.debug.xcconfig */,
-				9CE96C739A404354F6E1A877 /* Pods-CatGrid.release.xcconfig */,
+				CA184A0F1F31D367A9E8137E /* Pods-CatGrid.debug.xcconfig */,
+				6045733246D1038EFFE9D428 /* Pods-CatGrid.release.xcconfig */,
+				F0D70A61B01D06C0F0A29DB5 /* Pods-CatGridTests.debug.xcconfig */,
+				44194C460CE9CC3AE4E70DFB /* Pods-CatGridTests.release.xcconfig */,
+				E34B14D69341A6796E28CEF7 /* Pods-CatGridUITests.debug.xcconfig */,
+				D2F347F35051EBC64AE23D41 /* Pods-CatGridUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		549D27CAB30E17C134E2523E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C65ABBEB6DDDEEBC8CA4D5C1 /* Pods_CatGrid.framework */,
+				A3C0DE01E7232A6FC0BEF817 /* Pods_CatGridTests.framework */,
+				9675AD09A7C13469AC540AD3 /* Pods_CatGridUITests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		A9435B4F1E8AC00F00ECF4CE = {
@@ -119,8 +135,8 @@
 				A9435B6F1E8AC01000ECF4CE /* CatGridTests */,
 				A9435B7A1E8AC01000ECF4CE /* CatGridUITests */,
 				A9435B591E8AC00F00ECF4CE /* Products */,
-				3A1B81AC59A8388DE84D54AF /* Pods */,
-				05C3D57377341335B1E2099B /* Frameworks */,
+				3F1177927A6638B56AECD9D9 /* Pods */,
+				549D27CAB30E17C134E2523E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,12 +228,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9435B801E8AC01000ECF4CE /* Build configuration list for PBXNativeTarget "CatGrid" */;
 			buildPhases = (
-				4B19C6DB8F2B79B38D399D77 /* Check Pods Manifest.lock */,
+				83AF857739FAC6F15035EB63 /* [CP] Check Pods Manifest.lock */,
 				A9435B541E8AC00F00ECF4CE /* Sources */,
 				A9435B551E8AC00F00ECF4CE /* Frameworks */,
 				A9435B561E8AC00F00ECF4CE /* Resources */,
-				AEBA06A6741BD00E0E546366 /* Embed Pods Frameworks */,
-				00BBABFF29F7E2A4E9B7786C /* Copy Pods Resources */,
+				8224A5C6B44F322C79C10723 /* [CP] Embed Pods Frameworks */,
+				1A1A11E7CBCBADAB1EFB5274 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,9 +248,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9435B831E8AC01000ECF4CE /* Build configuration list for PBXNativeTarget "CatGridTests" */;
 			buildPhases = (
+				E1153EA7CE1B363EA2B5A6D7 /* [CP] Check Pods Manifest.lock */,
 				A9435B681E8AC01000ECF4CE /* Sources */,
 				A9435B691E8AC01000ECF4CE /* Frameworks */,
 				A9435B6A1E8AC01000ECF4CE /* Resources */,
+				D8C491945BB76FF4FC789728 /* [CP] Embed Pods Frameworks */,
+				6F7948521FF3E4045F1F9EF3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,9 +269,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9435B861E8AC01000ECF4CE /* Build configuration list for PBXNativeTarget "CatGridUITests" */;
 			buildPhases = (
+				101B96615DDBEBAB45EA6BE7 /* [CP] Check Pods Manifest.lock */,
 				A9435B731E8AC01000ECF4CE /* Sources */,
 				A9435B741E8AC01000ECF4CE /* Frameworks */,
 				A9435B751E8AC01000ECF4CE /* Resources */,
+				ED36974545D4FDE554909983 /* [CP] Embed Pods Frameworks */,
+				68835119F342D0347573694E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -343,14 +365,32 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		00BBABFF29F7E2A4E9B7786C /* Copy Pods Resources */ = {
+		101B96615DDBEBAB45EA6BE7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CatGridUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1A1A11E7CBCBADAB1EFB5274 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,34 +398,118 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CatGrid/Pods-CatGrid-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4B19C6DB8F2B79B38D399D77 /* Check Pods Manifest.lock */ = {
+		68835119F342D0347573694E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CatGridUITests/Pods-CatGridUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AEBA06A6741BD00E0E546366 /* Embed Pods Frameworks */ = {
+		6F7948521FF3E4045F1F9EF3 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CatGridTests/Pods-CatGridTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8224A5C6B44F322C79C10723 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CatGrid/Pods-CatGrid-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CatGrid/Pods-CatGrid-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83AF857739FAC6F15035EB63 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CatGrid-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8C491945BB76FF4FC789728 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CatGridTests/Pods-CatGridTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1153EA7CE1B363EA2B5A6D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CatGridTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED36974545D4FDE554909983 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CatGridUITests/Pods-CatGridUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -550,7 +674,7 @@
 		};
 		A9435B811E8AC01000ECF4CE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07238825E3A8CC5319670BDF /* Pods-CatGrid.debug.xcconfig */;
+			baseConfigurationReference = CA184A0F1F31D367A9E8137E /* Pods-CatGrid.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -565,7 +689,7 @@
 		};
 		A9435B821E8AC01000ECF4CE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9CE96C739A404354F6E1A877 /* Pods-CatGrid.release.xcconfig */;
+			baseConfigurationReference = 6045733246D1038EFFE9D428 /* Pods-CatGrid.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -580,6 +704,7 @@
 		};
 		A9435B841E8AC01000ECF4CE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0D70A61B01D06C0F0A29DB5 /* Pods-CatGridTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -595,6 +720,7 @@
 		};
 		A9435B851E8AC01000ECF4CE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44194C460CE9CC3AE4E70DFB /* Pods-CatGridTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -610,6 +736,7 @@
 		};
 		A9435B871E8AC01000ECF4CE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E34B14D69341A6796E28CEF7 /* Pods-CatGridUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 447M47227T;
@@ -624,6 +751,7 @@
 		};
 		A9435B881E8AC01000ECF4CE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2F347F35051EBC64AE23D41 /* Pods-CatGridUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 447M47227T;
